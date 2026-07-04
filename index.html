@@ -6,58 +6,33 @@
     <style>
         :root { --primary: #dc2626; --text: #1e293b; --muted: #64748b; --border: #cbd5e1; --green: #16a34a; --red: #dc2626; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-size: 11px; font-family: system-ui, sans-serif; }
-        body { background: #ffffff; color: var(--text); padding: 0; min-width: 1200px; }
-        
-        /* Fixed Header Section Design */
-        .fixed-header-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #ffffff;
-            z-index: 1000;
-            padding: 12px 12px 0 12px;
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
+        body { background: #ffffff; color: var(--text); min-width: 1200px; }
+        .fixed-header-container { position: fixed; top: 0; left: 0; right: 0; background: #ffffff; z-index: 1000; padding: 12px 12px 0 12px; border-bottom: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         header { border-bottom: 2px solid var(--primary); padding-bottom: 4px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
-        h1 { font-size: 15px; color: var(--primary); font-weight: bold; }
+        h1 { font-size: 14px; color: var(--primary); font-weight: bold; }
         .meta { display: flex; gap: 15px; color: var(--muted); font-weight: 600; align-items: center; }
-        h2 { font-size: 12px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin: 10px 0 4px 0; border-left: 3px solid var(--primary); padding-left: 5px; }
-        h3 { font-size: 11px; color: var(--text); font-weight: bold; margin: 8px 0 4px 0; text-transform: uppercase; }
-        
-        /* Scrollable Body Content Wrapper */
-        .scrollable-content {
-            margin-top: 135px; /* Offset to keep content from sliding behind fixed panels */
-            padding: 12px;
-        }
-        
+        h2 { font-size: 11px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin: 8px 0 4px 0; border-left: 3px solid var(--primary); padding-left: 5px; }
+        .scrollable-content { margin-top: 60px; padding: 12px; }
         .page { display: none; } .page.active { display: block; }
-        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 30px; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .menu-btn { background: #1e293b; color: white; padding: 20px; border-radius: 6px; text-align: center; cursor: pointer; font-size: 12px; font-weight: bold; border: 2px solid transparent; text-transform: uppercase; }
+        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 30px auto; max-width: 800px; }
+        .menu-btn { background: #1e293b; color: white; padding: 15px; border-radius: 6px; text-align: center; cursor: pointer; font-size: 12px; font-weight: bold; text-transform: uppercase; border: 2px solid transparent; }
         .menu-btn:hover { border-color: var(--primary); background: #0f172a; }
-        
         .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8px; }
         .card { background: #1e293b; border: 1px solid var(--border); padding: 8px; border-radius: 4px; }
         .lbl { color: #94a3b8; font-size: 9px; text-transform: uppercase; font-weight: 600; }
-        .val { color: #ffffff; font-size: 14px; font-weight: 700; margin-top: 2px; }
-        
+        .val { color: #ffffff; font-size: 13px; font-weight: 700; margin-top: 2px; }
         .tbl-wrap { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: #ffffff; margin-bottom: 8px; }
         table { width: 100%; border-collapse: collapse; text-align: left; }
         th { background: #f1f5f9; font-weight: 700; padding: 4px 6px; border-bottom: 2px solid var(--border); text-transform: uppercase; font-size: 9px; }
         td { padding: 4px 6px; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
         tr:hover td { background: #f8fafc; }
-        
-        .g { color: var(--green); font-weight: bold; } .r { color: var(--red); font-weight: bold; } 
-        .w { color: var(--text); } 
-        .w-m { color: #ffffff; } 
+        .g { color: var(--green); font-weight: bold; } .r { color: var(--red); font-weight: bold; }
         .btn-back { background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; cursor: pointer; font-weight: bold; border: none; }
     </style>
 </head>
 <body>
 
-    <!-- OUTLINE / MAIN MENU -->
+    <!-- MAIN MENU -->
     <div id="page-outline" class="page active" style="padding: 12px;">
         <header><h1>ENERGYMALL H1 PERFORMANCE DASHBOARD (JAN - JUN 2026)</h1></header>
         <div class="menu-grid">
@@ -72,443 +47,136 @@
         </div>
     </div>
 
-<!-- Logistics -->
-
-<div id="page-logistics" class="page">
-
-    <div class="fixed-header-container">
-
-        <header>
-
-            <h1>ENERGYMALL H1 REVIEW — LOGISTICS</h1>
-
-            <div class="meta">
-
-                <button class="btn-back" onclick="showPage('outline')">MENU</button>
-
-                <span>LEAD: <b>SUCCESS</b></span>
-
-            </div>
-        </header>
-    </div>
-
-    <div id="logistics-report" class="report-section" style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#333;line-height:1.6;max-width:1000px;margin:40px auto;padding:20px;">
-
-
-
-<!-- Section Header -->
-
-    <div style="border-left: 5px solid #008080; padding-left: 15px; margin-bottom: 30px;">
-
-        <h1 style="color: #008080; margin: 0 0 10px 0; font-size: 28px; font-weight: 700;">H1 2026 Logistics & Operations Report</h1>
-
-        <p style="color: #666; margin: 0; font-size: 14px;">Energymall Half-Year Performance Review (Compared with H1 2025)</p>
-
-    </div>
-
-
-
-    <!-- 1. KEY PERFORMANCE INDICATORS -->
-
-    <div style="margin-bottom: 35px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; border: 1px solid #eaeaea;">
-
-        <h2 style="color: #2c3e50; font-size: 18px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">1. Key Performance Indicators (KPIs)</h2>
-
-        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
-
-            <thead>
-
-                <tr style="background-color: #f8f9fa;">
-
-                    <th style="padding: 12px; border-bottom: 2px solid #dee2e6; color: #495057;">LOGISTICS</th>
-
-                    <th style="padding: 12px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">2026</th>
-
-                    <th style="padding: 12px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">2025</th>
-
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <tr style="border-bottom: 1px solid #dee2e6;">
-
-                    <td style="padding: 12px; font-weight: 600;">Deliveries</td>
-
-                    <td style="padding: 12px; text-align: center; font-weight: bold; color: #008080;">238</td>
-
-                    <td style="padding: 12px; text-align: center;">221</td>
-
-                </tr>
-
-                <tr style="border-bottom: 1px solid #dee2e6;">
-
-                    <td style="padding: 12px; font-weight: 600;">Unique Delivery company or personal used</td>
-
-                    <td style="padding: 12px; text-align: center; font-weight: bold; color: #008080;">138</td>
-
-                    <td style="padding: 12px; text-align: center;">82</td>
-
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-
-
-    <!-- 2. DELIVERY MEDIUM BREAKDOWN & TURNAROUND TIME -->
-
-    <div style="display: table; width: 100%; table-layout: fixed; margin-bottom: 35px; border-spacing: 15px 0; margin-left: -15px; margin-right: -15px;">
-
-        
-
-        <!-- Delivery Medium Breakdown -->
-
-        <div style="display: table-cell; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; vertical-align: top; border: 1px solid #eaeaea;">
-
-            <h2 style="color: #2c3e50; font-size: 17px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">2. Delivery Medium Breakdown</h2>
-
-            <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px;">
-
-                <thead>
-
-                    <tr style="background-color: #f8f9fa;">
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6;">Medium</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">Numbers</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">%</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px;">Dispatch Bike</td>
-
-                        <td style="padding: 10px; text-align: center;">37</td>
-
-                        <td style="padding: 10px; text-align: center;">26.81%</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px;">Transport Business (For Outside Lagos Deliveries)</td>
-
-                        <td style="padding: 10px; text-align: center;">3</td>
-
-                        <td style="padding: 10px; text-align: center;">2.17%</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px;">Transport Business (For Outside Lagos Deliveries) - Haulage</td>
-
-                        <td style="padding: 10px; text-align: center;">51</td>
-
-                        <td style="padding: 10px; text-align: center;">36.96%</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px;">Private Car</td>
-
-                        <td style="padding: 10px; text-align: center;">13</td>
-
-                        <td style="padding: 10px; text-align: center;">9.42%</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px;">Private Keke</td>
-
-                        <td style="padding: 10px; text-align: center;">32</td>
-
-                        <td style="padding: 10px; text-align: center;">23.19%</td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-        <!-- Turnaround Time & Personnel -->
-
-        <div style="display: table-cell; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; vertical-align: top; border: 1px solid #eaeaea;">
-
-            <h2 style="color: #2c3e50; font-size: 17px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">3. Delivery Time</h2>
-
-            <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; margin-bottom: 25px;">
-
-                <thead>
-
-                    <tr style="background-color: #f8f9fa;">
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6;">Region</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">2026</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">2025</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px; font-weight: 600;">Lagos</td>
-
-                        <td style="padding: 10px; text-align: center; color: #dc3545; font-weight: bold;">7 to 11 Hours</td>
-
-                        <td style="padding: 10px; text-align: center;">7 to 9 Hours</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #eee;">
-
-                        <td style="padding: 10px; font-weight: 600;">Outside Lagos</td>
-
-                        <td style="padding: 10px; text-align: center; color: #28a745; font-weight: bold;">48 to 72 Hours</td>
-
-                        <td style="padding: 10px; text-align: center;">48 to 72 Hours</td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-
-
-            <h2 style="color: #2c3e50; font-size: 17px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">4. Personnel Breakdown</h2>
-
-            <div style="padding-top: 5px; font-size: 14px;">
-
-                <p style="margin: 5px 0;"><strong>Success:</strong> <span style="font-weight: bold; color: #008080;">108</span></p>
-
-                <div style="background: #f8f9fa; border: 1px solid #eee; padding: 12px; border-radius: 4px; margin-top: 10px;">
-
-                    <div style="margin-bottom: 8px;">
-
-                        <span style="display:inline-block; width: 80px; font-weight: 600;">John:</span> 
-
-                        <span style="background: #008080; color: white; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: bold;">58</span>
-
-                    </div>
-
-                    <div>
-
-                        <span style="display:inline-block; width: 80px; font-weight: 600;">Samuel:</span> 
-
-                        <span style="background: #20b2aa; color: white; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: bold;">50</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- 5. REGIONAL BREAKDOWN TABLE -->
-
-    <div style="margin-bottom: 35px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; border: 1px solid #eaeaea;">
-
-        <h2 style="color: #2c3e50; font-size: 18px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">5. State Performance Breakdown</h2>
-
-        <div style="max-height: 500px; overflow-y: auto; margin-top: 15px; border: 1px solid #dee2e6; border-radius: 4px;">
-
-            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;">
-
-                <thead style="position: sticky; top: 0; background-color: #f8f9fa; z-index: 1;">
-
-                    <tr>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; color: #495057;">State</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">Orders</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">Revenue</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">Customers</th>
-
-                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">AVG Orders Per Month</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr style="background-color: #f1f9f9; font-weight: 600; border-bottom: 1px solid #dee2e6;">
-
-                        <td style="padding: 10px;">Lagos</td><td style="padding: 10px; text-align: center;">152</td><td style="padding: 10px; text-align: center;">65.71%</td><td style="padding: 10px; text-align: center;">64.41%</td><td style="padding: 10px; text-align: center;">25</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;">
-
-                        <td style="padding: 10px; font-weight: 600;">Federal Capital Territory</td><td style="padding: 10px; text-align: center;">18</td><td style="padding: 10px; text-align: center;">8.05%</td><td style="padding: 10px; text-align: center;">7.63%</td><td style="padding: 10px; text-align: center;">3</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;">
-
-                        <td style="padding: 10px; font-weight: 600;">Delta</td><td style="padding: 10px; text-align: center;">10</td><td style="padding: 10px; text-align: center;">4.11%</td><td style="padding: 10px; text-align: center;">4.24%</td><td style="padding: 10px; text-align: center;">2</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;">
-
-                        <td style="padding: 10px; font-weight: 600;">Rivers</td><td style="padding: 10px; text-align: center;">9</td><td style="padding: 10px; text-align: center;">4.99%</td><td style="padding: 10px; text-align: center;">3.81%</td><td style="padding: 10px; text-align: center;">2</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;">
-
-                        <td style="padding: 10px; font-weight: 600;">Ogun</td><td style="padding: 10px; text-align: center;">9</td><td style="padding: 10px; text-align: center;">4.43%</td><td style="padding: 10px; text-align: center;">3.81%</td><td style="padding: 10px; text-align: center;">2</td>
-
-                    </tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Oyo</td><td style="padding: 10px; text-align: center;">5</td><td style="padding: 10px; text-align: center;">0.71%</td><td style="padding: 10px; text-align: center;">2.12%</td><td style="padding: 10px; text-align: center;">1</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Anambra</td><td style="padding: 10px; text-align: center;">4</td><td style="padding: 10px; text-align: center;">2.12%</td><td style="padding: 10px; text-align: center;">1.69%</td><td style="padding: 10px; text-align: center;">1</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Akwa Ibom</td><td style="padding: 10px; text-align: center;">4</td><td style="padding: 10px; text-align: center;">1.03%</td><td style="padding: 10px; text-align: center;">1.69%</td><td style="padding: 10px; text-align: center;">1</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Cross River</td><td style="padding: 10px; text-align: center;">3</td><td style="padding: 10px; text-align: center;">0.58%</td><td style="padding: 10px; text-align: center;">1.27%</td><td style="padding: 10px; text-align: center;">1</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Osun</td><td style="padding: 10px; text-align: center;">3</td><td style="padding: 10px; text-align: center;">1.06%</td><td style="padding: 10px; text-align: center;">1.27%</td><td style="padding: 10px; text-align: center;">1</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Imo</td><td style="padding: 10px; text-align: center;">3</td><td style="padding: 10px; text-align: center;">0.81%</td><td style="padding: 10px; text-align: center;">1.27%</td><td style="padding: 10px; text-align: center;">1</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Edo</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">1.89%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Niger</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">0.14%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Ebonyi</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">0.49%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Abia</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">1.22%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Katsina</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.16%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Benue</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.03%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Kogi</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">1.04%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Ondo</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.19%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Adamawa</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.15%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Borno</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.17%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Ekiti</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.37%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Enugu</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.53%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <!-- Dormant / Zero Volume Regions -->
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Kaduna</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Kwara</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Nasarawa</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Kano</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Plateau</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Bauchi</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Sokoto</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Gombe</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-        </div>
-</div>
-<!-- LOGISTICS DEPARTMENT END --
-
-    <!-- MARKETING DEPARTMENT -->
+    <!-- B2C MARKETING -->
     <div id="page-marketing" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL H1 REVIEW — B2C MARKETING</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>SHEUN</b></span><span>DESIGNS & EDITS: <b>RAPHEAL</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">Social Traffic Matrix</div><div class="val">786,263</div><div class="g">105.50%</div></div>
-                <div class="card"><div class="lbl">Organic Visibility</div><div class="val">64,794 Reach</div><div class="g">59.99%</div></div>
-                <div class="card"><div class="lbl">Video Engine Output</div><div class="val">131 Units</div><div class="g">+37.89% YoY</div></div>
-                <div class="card"><div class="lbl">Budget Efficiency</div><div class="val" style="color:var(--green)">₦2,504,850.00</div><div class="g">-86.98% Cost Cut</div></div>
-            </div>
-        </div>
+        <div class="fixed-header-container"><header><h1>ENERGYMALL H1 REVIEW — B2C MARKETING</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>SHEUN</b></span></div></header></div>
         <div class="scrollable-content">
+            <div class="stats">
+                <div class="card"><div class="lbl">Social Traffic Matrix</div><div class="val">786k</div><div class="g">105.50%</div></div>
+                <div class="card"><div class="lbl">Organic Visibility</div><div class="val">64.7k Reach</div><div class="g">59.99%</div></div>
+                <div class="card"><div class="lbl">Total H1 Reach</div><div class="val">68.2k</div><div class="r">-99.50%</div></div>
+                <div class="card"><div class="lbl">Marketing Spend</div><div class="val" style="color:var(--green)">₦2.5m</div><div class="g">-86.98%</div></div>
+            </div>
             <h2>B2C MARKETING YoY KPI MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th><th>Analysis & Context</th></tr></thead>
+                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Videos Created</b></td><td>131</td><td>95</td><td class="g">+36</td><td class="g">37.89%</td><td>Strong increase in video asset pipeline under Rapheal.</td></tr>
-                        <tr><td><b>Leads</b></td><td>1,783 Leads</td><td class="w">2,394 Leads</td><td class="r">-611 Leads</td><td class="r">-25.52%</td><td>Down due to massive cut in paid ad spend.</td></tr>
-                        <tr><td><b>Engagement</b></td><td>8,136</td><td class="w">117,189</td><td class="r">-109,053</td><td class="r">-93.06%</td><td>Significant reduction without ad-boosted interactions.</td></tr>
-                        <tr><td><b>Views</b></td><td>197,632</td><td class="w">17,823,688</td><td class="r">-17,626,056</td><td class="r">-98.89%</td><td>Drastic drop; highlights reliance on historical paid campaigns.</td></tr>
-                        <tr><td><b>Organic Reach</b></td><td>64,794</td><td class="w">40,500</td><td class="g">+24,294</td><td class="g">59.99%</td><td>Positive structural growth via non-paid organic content.</td></tr>
-                        <tr><td><b>Ad Reach</b></td><td>3,470</td><td class="w">13,659,941</td><td class="r">-13,656,471</td><td class="r">-99.97%</td><td>Paid customer acquisition channels practically paused.</td></tr>
-                        <tr><td><b>Website Traffic From Socials</b></td><td>786,263</td><td class="w">382,610</td><td class="g">+403,653</td><td class="g">105.50%</td><td>Superb conversion efficiency from social networks to site.</td></tr>
-                        <tr><td><b>Marketing Spend</b></td><td class="g">₦2,504,850.00</td><td class="w">₦19,233,000.00</td><td class="g">-₦16,728,150.00</td><td class="g">-86.98%</td><td>Incredible cost savings. CAC efficiency maximized.</td></tr>
+                        <tr><td><b>Videos Created</b></td><td>131</td><td>95</td><td class="g">+36</td><td class="g">37.89%</td></tr>
+                        <tr><td><b>Leads</b></td><td>1.7k Leads</td><td>2.3k Leads</td><td class="r">-610 Leads</td><td class="r">-25.48%</td></tr>
+                        <tr><td><b>Engagement</b></td><td>8.1k</td><td>117.1k</td><td class="r">-109k</td><td class="r">-93.06%</td></tr>
+                        <tr><td><b>Views</b></td><td>197.6k</td><td>17.8m</td><td class="r">-17.6m</td><td class="r">-98.89%</td></tr>
+                        <tr><td><b>Organic Reach</b></td><td>64.7k</td><td>40.5k</td><td class="g">+24.2k</td><td class="g">59.99%</td></tr>
+                        <tr><td><b>Ad Reach</b></td><td>0</td><td>13.6m</td><td class="r">-13.6m</td><td class="r">-100.00%</td></tr>
+                        <tr><td><b>Total Reach</b></td><td>68.2k</td><td>13.7m</td><td class="r">-13.6m</td><td class="r">-99.50%</td></tr>
+                        <tr><td><b>New Followers</b></td><td>59</td><td>133</td><td class="r">-74</td><td class="r">-55.64%</td></tr>
+                        <tr><td><b>Articles</b></td><td>22</td><td>76</td><td class="r">-54</td><td class="r">-71.05%</td></tr>
+                        <tr><td><b>Facebook Post</b></td><td>279</td><td>90</td><td class="g">+189</td><td class="g">210.00%</td></tr>
+                        <tr><td><b>Instagram Post</b></td><td>304</td><td>90</td><td class="g">+214</td><td class="g">237.78%</td></tr>
+                        <tr><td><b>Tiktok Post</b></td><td>271</td><td>91</td><td class="g">+180</td><td class="g">197.80%</td></tr>
+                        <tr><td><b>Website Traffic From Socials</b></td><td>786.2k</td><td>382.6k</td><td class="g">+403.6k</td><td class="g">105.50%</td></tr>
+                        <tr><td><b>SEO Articles</b></td><td>10.8</td><td>14</td><td class="r">-3.2</td><td class="r">-22.86%</td></tr>
+                        <tr><td><b>SEO Ranking</b></td><td>76.3</td><td>85</td><td class="r">-8.7</td><td class="r">-10.24%</td></tr>
+                        <tr><td><b>Traffic From Search</b></td><td>119k</td><td>126.2k</td><td class="r">-7.1k</td><td class="r">-5.65%</td></tr>
+                        <tr><td><b>Email Marketing</b></td><td>10</td><td>No Data</td><td>No Data</td><td>No Data</td></tr>
+                        <tr><td><b>Marketing Spend</b></td><td class="g">₦2.5m</td><td>₦19.2m</td><td class="g">-₦16.7m</td><td class="g">-86.98%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>2026 MONTHLY RUN BREAKDOWN</h2>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Metric</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Videos Created</b></td><td>10</td><td>16</td><td>21</td><td>22</td><td>23</td><td>39</td></tr>
+                        <tr><td><b>Leads</b></td><td>266</td><td>215</td><td>358</td><td>385</td><td>348</td><td>212</td></tr>
+                        <tr><td><b>Engagement</b></td><td>1k</td><td>934</td><td>714</td><td>502</td><td>1.3k</td><td>3.6k</td></tr>
+                        <tr><td><b>Views</b></td><td>20k</td><td>13.7k</td><td>14k</td><td>68.6k</td><td>73.9k</td><td>7.2k</td></tr>
+                        <tr><td><b>Organic Reach</b></td><td>10.4k</td><td>5.7k</td><td>4.3k</td><td>3.1k</td><td>4.2k</td><td>36.9k</td></tr>
+                        <tr><td><b>Ad Reach</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3.4k</td></tr>
+                        <tr><td><b>Total Reach</b></td><td>10.4k</td><td>5.7k</td><td>4.3k</td><td>3.1k</td><td>4.2k</td><td>40.3k</td></tr>
+                        <tr><td><b>New Followers</b></td><td>0</td><td>0</td><td>33</td><td>9</td><td>9</td><td>8</td></tr>
+                        <tr><td><b>Articles</b></td><td>0</td><td>22</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                        <tr><td><b>Facebook Post</b></td><td>43</td><td>44</td><td>51</td><td>43</td><td>59</td><td>39</td></tr>
+                        <tr><td><b>Instagram Post</b></td><td>43</td><td>43</td><td>51</td><td>43</td><td>59</td><td>65</td></tr>
+                        <tr><td><b>Tiktok Post</b></td><td>43</td><td>43</td><td>51</td><td>43</td><td>59</td><td>32</td></tr>
+                        <tr><td><b>Website Traffic From Socials</b></td><td>169.8k</td><td>149.7k</td><td>134.9k</td><td>107.3k</td><td>155.4k</td><td>68.9k</td></tr>
+                        <tr><td><b>SEO Articles</b></td><td>13</td><td>12.8</td><td>10.7</td><td>9.4</td><td>10.3</td><td>11</td></tr>
+                        <tr><td><b>SEO Ranking</b></td><td>78</td><td>78</td><td>76</td><td>75</td><td>75</td><td>83</td></tr>
+                        <tr><td><b>Traffic From Search</b></td><td>16.1k</td><td>17.7k</td><td>26k</td><td>22.4k</td><td>21.5k</td><td>15.1k</td></tr>
+                        <tr><td><b>Email Marketing</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>2</td></tr>
+                        <tr><td><b>Marketing Spend (₦)</b></td><td>289.7k</td><td>220k</td><td>558.6k</td><td>634.5k</td><td>582k</td><td>220k</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- SALES DEPARTMENT -->
+    <!-- B2C SALES -->
     <div id="page-sales" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL H1 REVIEW — B2C SALES</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>PAT</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">H1 2026 Total Revenue</div><div class="val" style="color:var(--green)">₦559,090,784.50</div><div class="g">H1 Capture Balance</div></div>
-                <div class="card"><div class="lbl">H1 2026 Conversion Efficiency</div><div class="val" style="color:var(--green)">12.90%</div><div class="g">+93.41% YoY Optimization</div></div>
-                <div class="card"><div class="lbl">H1 2026 Funnel Volume</div><div class="val w-m">258 Customers</div><div class="g">1,783 Allocated Leads</div></div>
-                <div class="card"><div class="lbl">H1 2026 Top Performer</div><div class="val w-m">Immaculate</div><div class="g">₦239.66m Generated</div></div>
-            </div>
-        </div>
+        <div class="fixed-header-container"><header><h1>ENERGYMALL H1 REVIEW — B2C SALES</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEADS TRACK: <b>1.8k</b></span></div></header></div>
         <div class="scrollable-content">
+            <div class="stats">
+                <div class="card"><div class="lbl">Total Revenue</div><div class="val">₦559m</div><div class="r">-6.53%</div></div>
+                <div class="card"><div class="lbl">Total Customers</div><div class="val">258</div><div class="g">16.74%</div></div>
+                <div class="card"><div class="lbl">Team Revenue Share</div><div class="val">₦512.2m</div><div class="r">-6.09%</div></div>
+                <div class="card"><div class="lbl">Conversion Rate</div><div class="val">12.74%</div><div class="g">91.06%</div></div>
+            </div>
             <h2>B2C SALES YoY KPI MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th><th>Analysis</th></tr></thead>
+                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Revenue</b></td><td class="g">₦559,090,784.50</td><td class="w">₦598,146,378.00</td><td class="r">-₦39,055,593.50</td><td class="r">-6.53%</td><td>Highly resilient execution despite extreme top funnel marketing spend reductions.</td></tr>
-                        <tr><td><b>Customers</b></td><td>258</td><td class="w">221</td><td class="g">+37</td><td class="g">16.74%</td><td>Volume of transacting clients expanded.</td></tr>
-                        <tr><td><b>Conversion</b></td><td class="g">12.90%</td><td class="w">6.67%</td><td class="g">+6.23%</td><td class="g">93.41%</td><td>Outstanding functional close optimization by Pat's floor team.</td></tr>
+                        <tr><td><b>Revenue</b></td><td class="g">₦559m</td><td>₦598.1m</td><td class="r">-₦39.1m</td><td class="r">-6.53%</td></tr>
+                        <tr><td><b>New Customer Revenue</b></td><td>₦379.5m</td><td>₦410.6m</td><td class="r">-₦31.1m</td><td class="r">-7.58%</td></tr>
+                        <tr><td><b>Return Customer Revenue</b></td><td>₦179.6m</td><td>₦187.6m</td><td class="r">-₦7.9m</td><td class="r">-4.23%</td></tr>
+                        <tr><td><b>Customers</b></td><td>258</td><td>221</td><td class="g">+37</td><td class="g">16.74%</td></tr>
+                        <tr><td><b>New Customers</b></td><td>174</td><td>154</td><td class="g">+20</td><td class="g">12.99%</td></tr>
+                        <tr><td><b>Return Customers</b></td><td>84</td><td>67</td><td class="g">+17</td><td class="g">25.37%</td></tr>
+                        <tr><td><b>Leads</b></td><td>1.8k</td><td>2.3k</td><td class="r">-579 Leads</td><td class="r">-24.29%</td></tr>
+                        <tr><td><b>Conversion</b></td><td class="g">12.74%</td><td>6.67%</td><td class="g">+6.07%</td><td class="g">91.06%</td></tr>
+                        <tr><td><b>Sales Team Revenue</b></td><td>₦512.2m</td><td>₦545.5m</td><td class="r">-₦33.2m</td><td class="r">-6.09%</td></tr>
+                        <tr><td><b>The Business Revenue</b></td><td>₦46.9m</td><td>₦52.7m</td><td class="r">-₦5.8m</td><td class="r">-11.04%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>2026 MONTHLY BREAKDOWN TRACK</h2>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Metric</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Revenue (₦)</b></td><td>119m</td><td>110.6m</td><td>89.7m</td><td>106.5m</td><td>80.8m</td><td>51.8m</td></tr>
+                        <tr><td><b>New Cust Rev (₦)</b></td><td>93.8m</td><td>80.1m</td><td>46.5m</td><td>63.8m</td><td>61.9m</td><td>32.6m</td></tr>
+                        <tr><td><b>Ret Cust Rev (₦)</b></td><td>25.2m</td><td>30.5m</td><td>43.2m</td><td>42.7m</td><td>18.9m</td><td>19.2m</td></tr>
+                        <tr><td><b>Customers</b></td><td>45</td><td>39</td><td>47</td><td>51</td><td>45</td><td>31</td></tr>
+                        <tr><td><b>New Customers</b></td><td>30</td><td>25</td><td>28</td><td>33</td><td>34</td><td>24</td></tr>
+                        <tr><td><b>Return Customers</b></td><td>15</td><td>14</td><td>19</td><td>18</td><td>11</td><td>7</td></tr>
+                        <tr><td><b>Leads</b></td><td>266</td><td>215</td><td>358</td><td>385</td><td>348</td><td>212</td></tr>
+                        <tr><td><b>Conversion</b></td><td>16.92%</td><td>18.14%</td><td>13.13%</td><td>13.25%</td><td>12.93%</td><td>14.62%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>REPS SUMMARY & MONTHLY MATRIX</h2>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Rep Name</th><th>Total Revenue</th><th>Total Leads</th><th>Total Customers</th><th>Conversion</th><th>Bonus Earned</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Pat (Rep 1)</b></td><td>₦103.4m</td><td>727</td><td>63</td><td>8.67%</td><td>₦103,426.46</td></tr>
+                        <tr><td><b>Immaculate (Rep 3)</b></td><td class="g">₦239.7m</td><td>702</td><td>118</td><td class="g">16.81%</td><td>₦239,663.97</td></tr>
+                        <tr><td><b>Jemilah (Rep 4)</b></td><td>₦22.9m</td><td>0</td><td>8</td><td>No Data</td><td>₦22,857.48</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Month</th><th>Rev: Pat</th><th>Rev: Imma</th><th>Rev: Jemi</th><th>Cust: P / I / J</th><th>Leads: P / I / J</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Jan</b></td><td>36.3m</td><td>36.2m</td><td>1.4m</td><td>9 / 21 / 2</td><td>94 / 99 / 0</td></tr>
+                        <tr><td><b>Feb</b></td><td>10.2m</td><td>52.8m</td><td>0</td><td>7 / 18 / 0</td><td>77 / 81 / 0</td></tr>
+                        <tr><td><b>Mar</b></td><td>10.2m</td><td>47.4m</td><td>296k</td><td>12 / 18 / 1</td><td>153 / 119 / 0</td></tr>
+                        <tr><td><b>Apr</b></td><td>18.8m</td><td>44.5m</td><td>942k</td><td>15 / 24 / 1</td><td>186 / 131 / 0</td></tr>
+                        <tr><td><b>May</b></td><td>19.2m</td><td>23.7m</td><td>14.1m</td><td>15 / 14 / 2</td><td>169 / 135 / 0</td></tr>
+                        <tr><td><b>Jun</b></td><td>8.7m</td><td>35.1m</td><td>6.1m</td><td>5 / 23 / 2</td><td>48 / 137 / 0</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -517,54 +185,88 @@
 
     <!-- PRODUCT DEPARTMENT -->
     <div id="page-product" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL H1 REVIEW — PRODUCT MANAGEMENT</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>FUNMI</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">Onboarded Volume</div><div class="val w-m">1,444 New Products</div><div class="g">-47.41% Lifecycle Rebalance</div></div>
-                <div class="card"><div class="lbl">Updates Dashboard</div><div class="val w-m">3,040 Products</div><div class="g">Active Integrity Reviews</div></div>
-                <div class="card"><div class="lbl">Brand Content Hub</div><div class="val w-m">899 Articles</div><div class="g">+297.79% Indexing Expand</div></div>
-                <div class="card"><div class="lbl">Short-Form Engine</div><div class="val w-m">23 Videos</div><div class="g">Talking Head Launch Done</div></div>
-            </div>
-        </div>
+        <div class="fixed-header-container"><header><h1>ENERGYMALL H1 REVIEW — PRODUCT MANAGEMENT</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>FUNMI</b></span></div></header></div>
         <div class="scrollable-content">
-            <h2>PRODUCT MANAGEMENT SUMMARY</h2>
+            <div class="stats">
+                <div class="card"><div class="lbl">New Added</div><div class="val">1.4k</div><div class="r">-47.41%</div></div>
+                <div class="card"><div class="lbl">Updated Products</div><div class="val">3k</div><div class="r">-15.95%</div></div>
+                <div class="card"><div class="lbl">Articles Submitted</div><div class="val">899</div><div class="g">+297.79%</div></div>
+                <div class="card"><div class="lbl">Talking Head Videos</div><div class="val">23</div><div class="g">New Engine</div></div>
+            </div>
+            <h2>PRODUCT CORE PERFORMANCE MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
                     <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th></tr></thead>
                     <tbody>
-                        <tr><td><b>New Products Added</b></td><td>1,444</td><td>2,746</td><td class="r">-1,302</td><td class="r">-47.41%</td></tr>
-                        <tr><td><b>Articles Submitted</b></td><td>899</td><td>226</td><td class="g">+673</td><td class="g">297.79%</td></tr>
+                        <tr><td><b>New Products Added</b></td><td>1.4k Items</td><td>2.7k Items</td><td class="r">-1.3k Items</td><td class="r">-47.41%</td></tr>
+                        <tr><td><b>Existing Products Updated</b></td><td>3k Items</td><td>3.6k Items</td><td class="r">-577 Items</td><td class="r">-15.95%</td></tr>
+                        <tr><td><b>Number Of Products Promoted</b></td><td>989</td><td>1.1k</td><td class="r">-156</td><td class="r">-13.62%</td></tr>
+                        <tr><td><b>Articles</b></td><td>899</td><td>226</td><td class="g">+673</td><td class="g">297.79%</td></tr>
+                        <tr><td><b>Talking Head Videos</b></td><td>23</td><td>No Data</td><td>No Data</td><td>No Data</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>2026 MONTHLY RUN METRICS</h2>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Core Metric Run</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>New Products Added</b></td><td>190</td><td>297</td><td>182</td><td>344</td><td>244</td><td>187</td></tr>
+                        <tr><td><b>Existing Products Updated</b></td><td>621</td><td>502</td><td>468</td><td>655</td><td>378</td><td>416</td></tr>
+                        <tr><td><b>Products Promoted</b></td><td>101</td><td>129</td><td>188</td><td>194</td><td>93</td><td>113</td></tr>
+                        <tr><td><b>Articles Published</b></td><td>67</td><td>95</td><td>169</td><td>175</td><td>150</td><td>210</td></tr>
+                        <tr><td><b>Talking Head Videos</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>23</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>H1 PRODUCT TOTALS BY CATEGORY / LEAD</h2>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Category Lead Assignment Details</th><th>Onboarded</th><th>Updated</th><th>SEO Art</th><th>Promo</th><th>Video</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Josiah Favour Oluchi</b> (Cables, Transformers)</td><td>273</td><td>436</td><td>118</td><td>61</td><td>2</td></tr>
+                        <tr><td><b>Asia Grace</b> (Water Pump, Insulation)</td><td>129</td><td>250</td><td>142</td><td>175</td><td>3</td></tr>
+                        <tr><td><b>Ishola Abisola</b> (Computer, Network, CCTV)</td><td>437</td><td>1.1k</td><td>105</td><td>91</td><td>5</td></tr>
+                        <tr><td><b>Orumwense Owen</b> (Home Electronics, Lighting)</td><td>227</td><td>478</td><td>133</td><td>186</td><td>2</td></tr>
+                        <tr><td><b>Sarah Onuoha</b> (Solar 1: Inverters, Batteries)</td><td>342</td><td>2.5k</td><td>167</td><td>151</td><td>4</td></tr>
+                        <tr><td><b>Funmi</b> (Solar 2: Charge Controllers, Panels)</td><td>179</td><td>2.8k</td><td>75</td><td>77</td><td>0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>UNIT SALES INDEX (TOP MOVERS)</h2>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Product Segment Category</th><th>Total Sold</th><th>% Vol</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Cables</b></td><td>10.8k</td><td>83.3%</td><td>3.4k</td><td>2.9k</td><td>1.1k</td><td>658</td><td>2.4k</td><td>1.1k</td></tr>
+                        <tr><td><b>Electrical Accessories</b></td><td>593</td><td>4.6%</td><td>126</td><td>53</td><td>66</td><td>254</td><td>44</td><td>50</td></tr>
+                        <tr><td><b>Solar Batteries</b></td><td>430</td><td>3.3%</td><td>47</td><td>144</td><td>83</td><td>45</td><td>60</td><td>51</td></tr>
+                        <tr><td><b>Insulation Materials</b></td><td>164</td><td>1.3%</td><td>0</td><td>30</td><td>53</td><td>39</td><td>5</td><td>37</td></tr>
+                        <tr><td><b>Inverters</b></td><td>126</td><td>1.0%</td><td>32</td><td>22</td><td>22</td><td>23</td><td>14</td><td>13</td></tr>
+                        <tr><td><b>Solar Panels</b></td><td>66</td><td>0.5%</td><td>36</td><td>2</td><td>4</td><td>8</td><td>7</td><td>9</td></tr>
+                        <tr style="font-weight:bold; background:#f1f5f9;"><td>TOTAL UNIT VOLUME</td><td>13k</td><td>100%</td><td>3.6k</td><td>3.2k</td><td>1.4k</td><td>1k</td><td>2.6k</td><td>1.3k</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- WEB SUPPORT & IT REVIEW -->
+    <!-- WEB SUPPORT & IT -->
     <div id="page-it" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL H1 REVIEW — WEB SUPPORT & IT</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>ERIC</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">H1 Overall Traffic Volume</div><div class="val w-m">926,798 Hits</div><div class="g">+82.14% Traffic Surge</div></div>
-                <div class="card"><div class="lbl">Total Website Products</div><div class="val w-m">13,373 Products</div><div class="g">+8.72% Catalog Growth</div></div>
-                <div class="card"><div class="lbl">Existing Products Updated</div><div class="val w-m">33,112 Items</div><div class="g">+10.74% Database Ops</div></div>
-                <div class="card"><div class="lbl">New Products Onboarded</div><div class="val w-m">779 Items</div><div class="g">+140.43% Inventory</div></div>
-            </div>
-        </div>
+        <div class="fixed-header-container"><header><h1>ENERGYMALL H1 REVIEW — WEB SUPPORT & IT</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>ERIC</b></span></div></header></div>
         <div class="scrollable-content">
-            <h2>WEB SUPPORT YoY KPI MATRIX</h2>
+            <div class="stats">
+                <div class="card"><div class="lbl">Overall Traffic Volume</div><div class="val w-m">926.7k Hits</div><div class="g">+82.14%</div></div>
+                <div class="card"><div class="lbl">Total Website Products</div><div class="val w-m">13.3k Items</div><div class="g">+8.72%</div></div>
+                <div class="card"><div class="lbl">Products Updated</div><div class="val w-m">33.1k Items</div><div class="g">+10.74%</div></div>
+                <div class="card"><div class="lbl">New Products Onboarded</div><div class="val w-m">779 Items</div><div class="g">+140.43%</div></div>
+            </div>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>KPI Metric Descriptor</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference Matrix</th><th>% Status</th></tr></thead>
+                    <thead><tr><th>KPI Metric Descriptor</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>% Status</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Traffic From Social & Direct</b></td><td class="g">804,202 Hits</td><td>263,769 Hits</td><td class="g">+540,433 Hits</td><td class="g">161.12%</td></tr>
-                        <tr><td><b>Overall Traffic</b></td><td class="g">926,798 Hits</td><td>508,842 Hits</td><td class="g">+417,956 Hits</td><td class="g">82.14%</td></tr>
+                        <tr><td><b>Traffic From Social & Direct</b></td><td>804.2k Hits</td><td>263.7k Hits</td><td class="g">161.12%</td></tr>
+                        <tr><td><b>Overall Traffic</b></td><td>926.7k Hits</td><td>508.8k Hits</td><td class="g">82.14%</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -573,153 +275,45 @@
 
     <!-- SERVICE MARKETING HUB -->
     <div id="page-service-mktg" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL SERVICES — MARKETING HUB</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>KPI TYPE: <b>SERVICE CAMPAIGNS</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">Total Service Traffic</div><div class="val w-m">15,392 Hits</div><div class="g">Search + Social Distribution</div></div>
-                <div class="card"><div class="lbl">Email Base Generated</div><div class="val w-m">18,818 Addresses</div><div class="g">Active Inbound Capture</div></div>
-                <div class="card"><div class="lbl">Total Service Leads Won</div><div class="val w-m">14 Leads</div><div class="g">Channel Aggregation Capture</div></div>
-                <div class="card"><div class="lbl">SEO Overall Service Rank</div><div class="val w-m">189.33</div><div class="g">Baseline Average Level</div></div>
-            </div>
-        </div>
-        
+        <div class="fixed-header-container"><header><h1>ENERGYMALL SERVICES — MARKETING HUB</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>MARKETING</b></span></div></header></div>
         <div class="scrollable-content">
-            <h2>SERVICE MARKETING HALF-YEAR PERFORMANCE (JAN - JUN 2026)</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Segment Portfolio</th><th>KPI Metric Name</th><th>Achieved Jan-Jun 26</th><th>Strategic Context / Performance Scope</th></tr></thead>
-                    <tbody>
-                        <!-- Email Tracking Group -->
-                        <tr><td rowspan="5"><b>EMAIL MARKETING</b></td><td>No Of Email Addresses Generated</td><td>18,818</td><td>Aggressive contact onboarding validation processes.</td></tr>
-                        <tr><td>No Of Email Addresses Sent</td><td>9,569</td><td>Core customer deployment engagement target pool.</td></tr>
-                        <tr><td>No Email Campaign Blasts Sent</td><td>20</td><td>Broadcast strategy run intervals.</td></tr>
-                        <tr><td>Email Open Rate (%)</td><td>5.39%</td><td>Baseline engagement level across active workflows.</td></tr>
-                        <tr><td>No Of Leads Generated From Emails</td><td>29</td><td>Inbound conversion indicators from targeted updates.</td></tr>
-                        <!-- Organic Group -->
-                        <tr><td rowspan="4"><b>ORGANIC NETWORKS</b></td><td>Total Number Of Organic Post On FB/IG/TT</td><td>26</td><td>Cross-platform content generation baseline profiles.</td></tr>
-                        <tr><td>Total Reach On Social Media</td><td>3,818</td><td>Brand distribution reach baseline metrics.</td></tr>
-                        <tr><td>Total Engagement From Social Media</td><td>391</td><td>User reaction footprint loops.</td></tr>
-                        <tr><td>Total Traffic From Social Media</td><td>3,621</td><td>Highly efficient inbound routing architecture.</td></tr>
-                        <!-- SEO Group -->
-                        <tr><td rowspan="5"><b>SEO ARCHITECTURE</b></td><td>Total Articles Done</td><td>57</td><td>Informational search engine visibility layers.</td></tr>
-                        <tr><td>Keyword Ranking For Service Website</td><td>0</td><td>High authority landing structures require adjustments.</td></tr>
-                        <tr><td>SEO Category Ranking</td><td>116</td><td>Structural taxonomy verification benchmarks.</td></tr>
-                        <tr><td>SEO Overall Ranking</td><td>189.33</td><td>Aggregated score footprint indices.</td></tr>
-                        <tr><td>Total Website Traffic From Search</td><td>11,771</td><td>Organic core discovery routing pipelines.</td></tr>
-                        <!-- Final Conversion Wrap -->
-                        <tr style="background:#f8fafc; font-weight:bold;"><td><b>SUMMARY MATRIX</b></td><td>TOTAL LEADS FROM SERVICE CHANNELS</td><td class="g">14</td><td>Unified service request routing acquisitions completed.</td></tr>
-                    </tbody>
-                </table>
+            <div class="stats">
+                <div class="card"><div class="lbl">Total Service Traffic</div><div class="val w-m">15.3k Hits</div><div class="g">Active</div></div>
+                <div class="card"><div class="lbl">Email Base Generated</div><div class="val w-m">18.8k Adds</div><div class="g">Capture</div></div>
+                <div class="card"><div class="lbl">Total Leads Won</div><div class="val w-m">14 Leads</div><div class="g">Won</div></div>
+                <div class="card"><div class="lbl">SEO Overall Service Rank</div><div class="val w-m">189.33</div><div class="g">Baseline</div></div>
             </div>
-
-            <h2>SERVICE MARKETING 2026 MONTHLY RUN REVIEWS</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Channel Class</th><th>KPI Line Metric</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
+                    <thead><tr><th>Segment</th><th>KPI Metric Name</th><th>Jan-Jun 26</th><th>Context</th></tr></thead>
                     <tbody>
-                        <!-- Email -->
-                        <tr><td rowspan="5"><b>EMAIL DATA</b></td><td>Email Addresses Generated</td><td>NO DATA</td><td>NO DATA</td><td>33</td><td>7,091</td><td>4,163</td><td class="g">7,531</td></tr>
-                        <tr><td>Email Addresses Sent</td><td>NO DATA</td><td>NO DATA</td><td>60</td><td>2,435</td><td>4,545</td><td>2,529</td></tr>
-                        <tr><td>Campaign Blasts Sent</td><td>NO DATA</td><td>NO DATA</td><td>5</td><td>10</td><td>3</td><td>2</td></tr>
-                        <tr><td>Email Open Rate (%)</td><td>NO DATA</td><td>NO DATA</td><td>3.56%</td><td class="g">10.10%</td><td>8.63%</td><td class="g">10.11%</td></tr>
-                        <tr><td>Leads From Emails</td><td>NO DATA</td><td>NO DATA</td><td>1</td><td>7</td><td>10</td><td class="g">11</td></tr>
-                        <!-- Organic -->
-                        <tr><td rowspan="4"><b>ORGANIC SOCIAL</b></td><td>Organic Posts (FB/IG/TT)</td><td>NO DATA</td><td>NO DATA</td><td>10</td><td>9</td><td>5</td><td>2</td></tr>
-                        <tr><td>Social Media Total Reach</td><td>NO DATA</td><td>NO DATA</td><td>883</td><td>1,426</td><td>1,205</td><td>304</td></tr>
-                        <tr><td>Social Media Engagement</td><td>NO DATA</td><td>NO DATA</td><td>140</td><td>139</td><td>87</td><td>25</td></tr>
-                        <tr><td>Social Media Total Traffic</td><td>NO DATA</td><td>NO DATA</td><td>0</td><td>0</td><td>3,415</td><td>206</td></tr>
-                        <!-- SEO -->
-                        <tr><td rowspan="5"><b>SEO DISCOVERY</b></td><td>Total Articles Finished</td><td>NO DATA</td><td>NO DATA</td><td>21</td><td>18</td><td>10</td><td>8</td></tr>
-                        <tr><td>Keyword Service Ranking</td><td>NO DATA</td><td>NO DATA</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>SEO Category Ranking</td><td>NO DATA</td><td>NO DATA</td><td>0</td><td>0</td><td>116</td><td>0</td></tr>
-                        <tr><td>SEO Overall Ranking</td><td>NO DATA</td><td>NO DATA</td><td>77.50</td><td>4.50</td><td>38.50</td><td>18.30</td></tr>
-                        <tr><td>Search Website Traffic</td><td>NO DATA</td><td>NO DATA</td><td>100</td><td>5,636</td><td>2,431</td><td>3,604</td></tr>
-                        <!-- Summary -->
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td><b>FINAL SUM</b></td><td>TOTAL LEADS GENERATED</td><td>NO DATA</td><td>NO DATA</td><td class="g">14</td><td>0</td><td>0</td><td>0</td></tr>
+                        <tr><td><b>Email</b></td><td>Email Addresses Generated</td><td>18.8k</td><td>Contact onboarding validation.</td></tr>
+                        <tr><td><b>Organic</b></td><td>Total Traffic From Social Media</td><td>3.6k</td><td>Efficient inbound routing.</td></tr>
+                        <tr><td><b>SEO</b></td><td>Total Website Traffic From Search</td><td>11.7k</td><td>Organic core discovery routing.</td></tr>
+                        <tr style="background:#f8fafc; font-weight:bold;"><td><b>SUM</b></td><td>TOTAL LEADS FROM SERVICE CHANNELS</td><td class="g">14</td><td>Unified service request acquisitions.</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- SERVICE OPERATIONS (REPS & TECHS) -->
+    <!-- SERVICE OPERATIONS -->
     <div id="page-service-ops" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL SERVICE OPERATIONS — OPERATIONS & TECHNICALS</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>ROSTER CODES: <b>PURE/BUY/REP/PRO</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">Service Operations Revenue</div><div class="val" style="color:var(--green)">₦1,290,500.00</div><div class="g">+104.84% YoY Growth</div></div>
-                <div class="card"><div class="lbl">Cross-Sales Closed Revenue</div><div class="val" style="color:var(--green)">₦22,898,480.00</div><div class="g">Associated Product Sales</div></div>
-                <div class="card"><div class="lbl">Technical Repairs Success</div><div class="val w-m">95.35% Completed</div><div class="g">41 of 43 Fulfilled</div></div>
-                <div class="card"><div class="lbl">Total Requests Managed</div><div class="val w-m">85 Service Tickets</td><div class="g">+54.55% Volume Scale</div></div>
-            </div>
-        </div>
-        
+        <div class="fixed-header-container"><header><h1>ENERGYMALL SERVICE OPERATIONS</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>ROSTER: <b>OPS</b></span></div></header></div>
         <div class="scrollable-content">
-            <h2>SERVICE OPERATIONS MANAGEMENT MATRIX</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Operational Area</th><th>KPI Target Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Change Status</th></tr></thead>
-                    <tbody>
-                        <!-- Reps Section -->
-                        <tr><td rowspan="9"><b>SERVICE REPS PERFORMANCE</b></td><td>Number Of Service Requests Received</td><td>85</td><td>55</td><td class="g">+30</td><td class="g">54.55%</td></tr>
-                        <tr><td>Pureserve Ticket Allocations</td><td>1</td><td>0</td><td class="g">+1</td><td class="g">10.00%</td></tr>
-                        <tr><td>Buyserve Ticket Allocations</td><td>35</td><td>21</td><td class="g">+14</td><td class="g">66.67%</td></tr>
-                        <tr><td>Repserve Ticket Allocations</td><td>49</td><td>34</td><td class="g">+15</td><td class="g">44.12%</td></tr>
-                        <tr><td>Proserve Ticket Allocations</td><td>0</td><td>0</td><td>0</td><td>0.00%</td></tr>
-                        <tr><td>Timeline For Request Processing</td><td>35</td><td>0</td><td class="r">+35</td><td class="r">0.00%</td></tr>
-                        <tr><td>Timeline For Request Completion</td><td>72</td><td>0</td><td class="r">+72</td><td class="r">0.00%</td></tr>
-                        <tr><td>Number Of Service Requests Completed</td><td>8</td><td>8</td><td>0</td><td>0.00%</td></tr>
-                        <tr><td>Revenue From Standalone Service</td><td class="g">₦1,290,500.00</td><td class="w">₦630,000.00</td><td class="g">₦660,500.00</td><td class="g">104.84%</td></tr>
-                        <!-- Internal Cross Sales -->
-                        <tr><td rowspan="3"><b>REPS VALUE-ADD SALES</b></td><td>Product Request / Sales Lead</td><td>32</td><td>0</td><td class="g">+32</td><td class="g">0.00%</td></tr>
-                        <tr><td>Product Sales Closed</td><td>17</td><td>24</td><td class="r">-7</td><td class="r">-29.17%</td></tr>
-                        <tr><td>Revenue From Associated Product Sales</td><td class="g">₦22,898,480.00</td><td class="w">₦36,261,225.00</td><td class="r">-₦13,362,745.00</td><td class="r">-36.85%</td></tr>
-                    </tbody>
-                </table>
+            <div class="stats">
+                <div class="card"><div class="lbl">Ops Revenue</div><div class="val" style="color:var(--green)">₦1.2m</div><div class="g">+104.84%</div></div>
+                <div class="card"><div class="lbl">Cross-Sales Revenue</div><div class="val" style="color:var(--green)">₦22.8m</div><div class="g">Product Sales</div></div>
+                <div class="card"><div class="lbl">Technical Repairs Success</div><div class="val w-m">95.35%</div><div class="g">41 of 43 Fulfilled</div></div>
+                <div class="card"><div class="lbl">Total Requests Managed</div><div class="val w-m">85 Tickets</div><div class="g">+54.55%</div></div>
             </div>
-
-            <h2>2026 SERVICE OPS MONTHLY DISTRIBUTION TRACE</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Group</th><th>Operational Line Metric</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
+                    <thead><tr><th>Operational Area</th><th>KPI Target Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>% Change</th></tr></thead>
                     <tbody>
-                        <tr><td rowspan="9"><b>REPS BASE</b></td><td>Service Requests Received</td><td>12</td><td>22</td><td>17</td><td>15</td><td>11</td><td>8</td></tr>
-                        <tr><td>Pureserve Tracking</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
-                        <tr><td>Buyserve Tracking</td><td>6</td><td>10</td><td>5</td><td>9</td><td>4</td><td>1</td></tr>
-                        <tr><td>Repserve Tracking</td><td>6</td><td>12</td><td>12</td><td>5</td><td>7</td><td>7</td></tr>
-                        <tr><td>Proserve Tracking</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Request Processing Timeline</td><td>0</td><td>34.67</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Request Completion Timeline</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Service Requests Completed</td><td>3</td><td>9</td><td>7</td><td>13</td><td>9</td><td>4</td></tr>
-                        <tr><td>Revenue From Service Operations</td><td>₦600,000</td><td>₦0</td><td>₦337,500</td><td>₦293,000</td><td>₦0</td><td>₦60,000</td></tr>
-                        <tr><td rowspan="3"><b>CROSS TRACK</b></td><td>Product Request / Sales Lead</td><td>2</td><td>0</td><td>1</td><td>7</td><td>1</td><td>21</td></tr>
-                        <tr><td>Product Sales Closed</td><td>1</td><td>0</td><td>2</td><td>1</td><td>2</td><td>11</td></tr>
-                        <tr><td>Revenue From Associated Product Sales</td><td>₦1,402,825</td><td>₦0</td><td>₦821,000</td><td>₦967,000</td><td>₦14,112,255</td><td>₦5,595,400</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>TECHNICAL SERVICES & FIELD LABOR FULFILLMENT</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Engineering Category</th><th>Target KPI Parameter Field</th><th>Jan-Jun 2026</th><th>Jan-Jun 2025</th><th>Variance Spread</th><th>Growth %</th></tr></thead>
-                    <tbody>
-                        <!-- Repair Matrix -->
-                        <tr><td rowspan="4"><b>REPAIRS & DIAGNOSTICS</b></td><td>No Of Request Received - Repair</td><td>43</td><td>55</td><td class="r">-12</td><td class="r">-21.82%</td></tr>
-                        <tr><td>No Of Request Completed - Repairs</td><td>41</td><td>37</td><td class="g">+4</td><td class="g">10.81%</td></tr>
-                        <tr><td>% Of Repairs Completed Successfully</td><td class="g">95.35%</td><td class="w">67.27%</td><td class="g">+28.08%</td><td class="g">41.73%</td></tr>
-                        <tr><td>Timeline for completion (1hr - 24hr)</td><td>26</td><td>45</td><td class="r">-19</td><td class="r">-42.22%</td></tr>
-                        <!-- Installation Matrix -->
-                        <tr><td rowspan="4"><b>FIELD INSTALLATIONS</b></td><td>No Of Installation Received</td><td>23</td><td>54</td><td class="r">-31</td><td class="r">-57.41%</td></tr>
-                        <tr><td>No Of Installation Completed</td><td>8</td><td>8</td><td>0</td><td>0.00%</td></tr>
-                        <tr><td>% Of Installation Completed Successfully</td><td class="r">34.78%</td><td class="w">14.81%</td><td class="g">+19.97%</td><td class="g">134.78%</td></tr>
-                        <tr><td>Timeline for completion (24hr - 48hr)</td><td>20</td><td>44</td><td class="r">-24</td><td class="r">-54.55%</td></tr>
+                        <tr><td><b>Reps Performance</b></td><td>Number Of Service Requests Received</td><td>85</td><td>55</td><td class="g">54.55%</td></tr>
+                        <tr><td><b>Reps Base</b></td><td>Revenue From Standalone Service</td><td class="g">₦1.2m</td><td>₦630k</td><td class="g">104.84%</td></tr>
+                        <tr><td><b>Value-Add</b></td><td>Revenue From Associated Product Sales</td><td class="g">₦22.8m</td><td>₦36.2m</td><td class="r">-36.85%</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -728,84 +322,96 @@
 
     <!-- FINANCE AND PROCUREMENT -->
     <div id="page-finance" class="page">
-        <div class="fixed-header-container">
-            <header>
-                <h1>ENERGYMALL FINANCE — ACCOUNTING & PROCUREMENT CONTROL</h1>
-                <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>AUDIT WINDOW: <b>H1 2026 RUN</b></span></div>
-            </header>
-            <div class="stats">
-                <div class="card"><div class="lbl">H1 Consolidated Revenue</div><div class="val" style="color:var(--green)">₦559,090,785.00</div><div class="g">Gross Organizational Ledger</div></div>
-                <div class="card"><div class="lbl">Average Acquisition Cost (CAC)</div><div class="val" style="color:var(--green)">₦60,242.90</div><div class="g">-48.52% Hyper Optimization</div></div>
-                <div class="card"><div class="lbl">H1 Dynamic Refund Flow</div><div class="val" style="color:var(--red)">₦87,697,959.00</div><div class="r">78 Customers Impacted</div></div>
-                <div class="card"><div class="lbl">H1 Average Monthly Margin</div><div class="val w-m">12%</div><div class="g">Stable 11% Structural Parity</div></div>
-            </div>
-        </div>
-        
+        <div class="fixed-header-container"><header><h1>ENERGYMALL FINANCE & CONTROL</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>RUN: <b>H1 2026</b></span></div></header></div>
         <div class="scrollable-content">
-            <h2>FINANCIAL BALANCE METRICS SUMMARY (YoY MANAGEMENT VIEW)</h2>
+            <div class="stats">
+                <div class="card"><div class="lbl">Gross Revenue</div><div class="val" style="color:var(--green)">₦559.1m</div><div class="g">-6.53%</div></div>
+                <div class="card"><div class="lbl">Avg CAC Index</div><div class="val" style="color:var(--green)">₦60.2k</div><div class="g">-48.52% Optimization</div></div>
+                <div class="card"><div class="lbl">Customer Refunds</div><div class="val" style="color:var(--red)">₦87.7m</div><div class="r">78 Clients Impacted</div></div>
+                <div class="card"><div class="lbl">Operational Profit Margin</div><div class="val w-m">12%</div><div class="g">Stable 11% Parity</div></div>
+            </div>
+            <h2>FINANCE & PROCUREMENT YoY CORE SUMMARY</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Financial Sub-Ledger Classification Group</th><th>Jan-Jun 2026</th><th>Jan-Jun 2025</th><th>Variance Spread Evaluation</th></tr></thead>
+                    <thead><tr><th>Financial Metric Group Description</th><th>Jan-Jun 2026</th><th>Jan-Jun 2025</th><th>YoY Variance Shift</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Gross Revenue</b></td><td class="g">₦559,090,785.00</td><td class="w">₦598,146,378.00</td><td class="r">-₦39,055,593.00 (-6.53%)</td></tr>
-                        <tr><td><b>Total Logged Customer Base Volume</b></td><td>258 Customers</td><td>221 Customers</td><td class="g">+37 Customers (+16.74%)</td></tr>
-                        <tr><td><b>Return Customers Share Percentage</b></td><td class="g">32.56%</td><td>30.32%</td><td class="g">+2.24% Customer Value Integration</td></tr>
-                        <tr><td><b>Return Customers Counts Volume</b></td><td>84 Customers</td><td>67 Customers</td><td class="g">+17 Retained Transactors</td></tr>
-                        <tr><td><b>New Customers Base Volume</b></td><td>174 Customers</td><td>154 Customers</td><td class="g">+20 First-Time Transactors</td></tr>
-                        <tr><td><b>Average Ticket Spend Per Customer Portfolio</b></td><td>₦2,167,019.00</td><td>₦2,706,544.70</td><td class="r">-₦539,525.70 Basket Shrinkage</td></tr>
-                        <tr><td><b>Assigned Digital Leads Allocation</b></td><td>1,784 Leads</td><td>2,384 Leads</td><td class="r">-600 Leads Drop Across Channels</td></tr>
-                        <tr><td><b>Average Monthly Operational Profit Margin</b></td><td>12%</td><td>11%</td><td class="g">+1% Structural Optimization Target</td></tr>
-                        <tr><td><b>Total Capital Customer Refund Outflows</b></td><td class="r">₦87,697,959.00</td><td>₦53,440,848.13</td><td class="r">+₦34,257,110.87 Inflow Corrections</td></tr>
-                        <tr><td><b>Total Unique Client Transactors Refunded</b></td><td>78 Customers</td><td>43 Customers</td><td class="r">+35 Operational Discrepancies</td></tr>
-                        <tr><td><b>Unique Customer Refund Count Flags</b></td><td>233</td><td>159</td><td class="r">+74 High Escalation Flags</td></tr>
-                        <tr><td><b>Total Completed Systems Orders</b></td><td>258 Orders</td><td>221 Orders</td><td class="g">+37 Fulfilled Procurement Invoices</td></tr>
-                        <tr><td><b>Sponsored Paid Advertisements Spend Balance</b></td><td class="g">₦2,284,850.00</td><td>₦19,233,890.00</td><td class="g">-₦16,949,040.00 Budget Drops</td></tr>
-                        <tr><td><b>Logistics, Delivery & Freight Spend</b></td><td>₦13,257,819.37</td><td>₦6,628,559.00</td><td class="r">+₦6,629,260.37 Transport Expansion</td></tr>
-                        <tr><td><b>Combined Operations Spend (Ad + Log)</b></td><td>₦15,542,669.37</td><td>₦25,862,449.00</td><td class="g">-₦10,319,779.63 Overall Burn Savings</td></tr>
-                        <tr style="background:#f8fafc; font-weight:bold;"><td><b>Customer Acquisition Cost Index (CAC)</b></td><td class="g">₦60,242.90</td><td>₦117,024.66</td><td class="g">-₦56,781.76 Unit Acquisition Profitability</td></tr>
-                        <tr><td><b>Average Order Value (AOV Metric)</b></td><td>₦2,399,531.27</td><td>₦3,761,926.91</td><td class="r">-₦1,362,395.64 Transaction Slip</td></tr>
-                        <tr><td><b>Customer Purchase Frequency Velocity</b></td><td>1.11</td><td>1.39</td><td class="r">-0.28 Structural Multipliers Traces</td></tr>
-                        <tr><td><b>Calculated Customer Lifetime Value (1 Year LTV)</b></td><td>₦2,656,991.70</td><td>₦5,228,841.80</td><td class="r">-₦2,571,850.10 Lifecycle Projection Compress</td></tr>
-                        <tr><td><b>Procurement Reply Latency Timeline - Lagos</b></td><td>00:10:35</td><td>00:08:32</td><td class="r">+00:02:03 Internal Operations Overhead</td></tr>
-                        <tr><td><b>Procurement Reply Latency Timeline - Outside Lagos</b></td><td>00:16:22</td><td>00:07:04</td><td class="r">+00:09:18 Inter-State Verification Delay</td></tr>
+                        <tr><td><b>Gross Revenue</b></td><td class="g">₦559.1m</td><td>₦598.1m</td><td class="r">-₦39.1m (-6.53%)</td></tr>
+                        <tr><td><b>Total Customers Logged</b></td><td>258 Customers</td><td>221 Customers</td><td class="g">+37 Customers (+16.74%)</td></tr>
+                        <tr><td><b>Return Customers Share %</b></td><td>32.56%</td><td>30.32%</td><td class="g">+2.24% Shift</td></tr>
+                        <tr><td><b>Return Customers Volume</b></td><td>84 Customers</td><td>67 Customers</td><td class="g">+17 Customers</td></tr>
+                        <tr><td><b>New Customers Volume</b></td><td>174 Customers</td><td>154 Customers</td><td class="g">+20 Customers</td></tr>
+                        <tr><td><b>Unique Customers</b></td><td>233 Customers</td><td>159 Customers</td><td class="g">+74 Customers</td></tr>
+                        <tr><td><b>Total Orders Completed</b></td><td>258 Orders</td><td>221 Orders</td><td class="g">+37 Orders</td></tr>
+                        <tr><td><b>Average Spend Per Customer</b></td><td>₦2.2m</td><td>₦2.7m</td><td class="r">-₦539.5k Decrease</td></tr>
+                        <tr><td><b>Avg Order Value (AOV)</b></td><td>₦2.2m</td><td>₦2.7m</td><td class="r">-₦539.5k Decrease</td></tr>
+                        <tr><td><b>Total Marketing Leads</b></td><td>1.8k Leads</td><td>2.4k Leads</td><td class="r">-600 Leads</td></tr>
+                        <tr><td><b>Average Monthly Margin</b></td><td>12%</td><td>11%</td><td class="g">+1% Efficiency Improvement</td></tr>
+                        <tr><td><b>Total Outflow Capital Refunds</b></td><td class="r">₦87.7m</td><td>₦53.4m</td><td class="r">+₦34.3m Expansion</td></tr>
+                        <tr><td><b>Total Unique Customers Refunded</b></td><td>78 Clients</td><td>43 Clients</td><td class="r">+35 Impacted</td></tr>
+                        <tr><td><b>Sponsored Paid Ad Outlay</b></td><td>₦2.3m</td><td>₦19.2m</td><td class="g">-₦16.9m Save</td></tr>
+                        <tr><td><b>Logistics Outlay Spend (Log)</b></td><td>₦13.3m</td><td>₦6.6m</td><td class="r">+₦6.6m Increase</td></tr>
+                        <tr><td><b>Total Combined Outlay (Ad + Log)</b></td><td>₦15.5m</td><td>₦25.9m</td><td class="g">-₦10.3m Efficiency Save</td></tr>
+                        <tr><td><b>Customer Acquisition Cost (CAC)</b></td><td class="g">₦60.2k</td><td>₦117k</td><td class="g">-₦56.8k Optimized (-48.52%)</td></tr>
+                        <tr><td><b>Purchase Frequency</b></td><td>1.11</td><td>1.39</td><td class="r">-0.28 Freq Drop</td></tr>
+                        <tr><td><b>Customer 1-Year LTV</b></td><td>₦2.4m</td><td>₦3.8m</td><td class="r">-₦1.4m Value Shrink</td></tr>
+                        <tr><td><b>Procurement Reply - Lagos</b></td><td>10m 35s</td><td>8m 32s</td><td class="r">+2m 03s Speed Delay</td></tr>
+                        <tr><td><b>Procurement Reply - Outside Lagos</b></td><td>16m 22s</td><td>7m 04s</td><td class="r">+9m 18s Speed Delay</td></tr>
                     </tbody>
                 </table>
             </div>
-
-            <h2>2026 GENERAL FINANCIAL PROFILE MONTLHY RUN LEDGER</h2>
+            <h2>2026 LEDGER EXPENSE & MONTHLY CASH MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Financial Parameter Line Item</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
+                    <thead><tr><th>Monthly Cash Runway Metric</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Product Inbound Revenue</b></td><td>₦109,417,250.00</td><td>₦78,449,046.00</td><td>₦89,858,250.00</td><td>₦110,861,017.00</td><td>₦86,437,995.00</td><td>₦62,645,160.00</td></tr>
-                        <tr><td><b>Collected Delivery Charges Inflow</b></td><td>₦1,097,000.00</td><td>₦1,143,640.00</td><td>₦1,245,500.00</td><td>₦2,604,000.00</td><td>₦1,280,002.00</td><td>₦912,500.00</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td><b>COMBINED GROSS TOTAL REVENUE</b></td><td class="g">₦110,514,250.00</td><td class="g">₦79,592,686.00</td><td class="g">₦91,103,750.00</td><td class="g">₦113,465,017.00</td><td class="g">₦87,717,997.00</td><td class="g">₦63,557,660.00</td></tr>
-                        <tr><td><b>Cost Of Goods Sold (COGS Outflow)</b></td><td>₦92,564,660.00</td><td>₦66,566,000.00</td><td>₦81,342,000.00</td><td>₦101,240,100.00</td><td>₦73,667,600.00</td><td>₦54,844,500.00</td></tr>
-                        <tr><td><b>Actual Logistics Delivery Spent</b></td><td>₦1,245,500.00</td><td>₦1,314,500.00</td><td>₦1,558,500.00</td><td>₦2,909,700.00</td><td>₦1,738,400.00</td><td>₦1,280,000.00</td></tr>
-                        <tr><td><b>Field Engineering Installation Cost</b></td><td>₦593,500.00</td><td>₦100,000.00</td><td>₦0.00</td><td>₦0.00</td><td>₦0.00</td><td>₦0.00</td></tr>
-                        <tr><td><b>Miscellaneous Operational Costs</b></td><td>₦188,400.00</td><td>₦101,800.00</td><td>₦95,100.00</td><td>₦224,200.00</td><td>₦66,600.00</td><td>₦112,000.00</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td><b>CONSOLIDATED TOTAL EXPENSES BURNT</b></td><td>₦94,592,060.00</td><td>₦68,082,300.00</td><td>₦82,995,600.00</td><td>₦104,374,000.00</td><td>₦75,472,600.00</td><td>₦56,236,500.00</td></tr>
-                        <tr style="background:#f8fafc; font-weight:bold;"><td><b>GROSS OPERATIONAL PROFIT GENERATED</b></td><td class="g">₦15,922,190.00</td><td class="g">₦11,510,386.00</td><td class="g">₦8,108,150.00</td><td class="g">₦9,091,017.00</td><td class="g">₦12,245,397.00</td><td class="g">₦7,321,160.00</td></tr>
-                        <tr><td><b>Net Core Margin After Sales Run</b></td><td>14%</td><td>14%</td><td>9%</td><td>8%</td><td>14%</td><td>12%</td></tr>
-                        <tr><td><b>Net Final Margin After All Expenses</b></td><td>2%</td><td>3%</td><td class="r">-9%</td><td>3%</td><td>1%</td><td>NO DATA</td></tr>
+                        <tr><td><b>Base Core Revenue</b></td><td>₦109.4m</td><td>₦78.4m</td><td>₦89.9m</td><td>₦110.9m</td><td>₦86.4m</td><td>₦62.6m</td></tr>
+                        <tr><td><b>Delivery Charges Collected</b></td><td>₦1.1m</td><td>₦1.1m</td><td>₦1.2m</td><td>₦2.6m</td><td>₦1.3m</td><td>₦912.5k</td></tr>
+                        <tr style="background:#f8fafc; font-weight:bold;"><td>COMBINED GROSS INFLOW</td><td>₦110.5m</td><td>₦79.6m</td><td>₦91.1m</td><td>₦113.5m</td><td>₦87.7m</td><td>₦63.6m</td></tr>
+                        <tr><td><b>Cost of Goods Sold (COGS)</b></td><td>₦92.6m</td><td>₦66.6m</td><td>₦81.3m</td><td>₦101.2m</td><td>₦73.7m</td><td>₦54.8m</td></tr>
+                        <tr><td><b>Actual Delivery Spent</b></td><td>₦1.2m</td><td>₦1.3m</td><td>₦1.6m</td><td>₦2.9m</td><td>₦1.7m</td><td>₦1.3m</td></tr>
+                        <tr><td><b>Project Installation Costs</b></td><td>₦593.5k</td><td>₦100k</td><td>₦0</td><td>₦0</td><td>₦0</td><td>₦0</td></tr>
+                        <tr><td><b>Other Miscellaneous Operational Cost</b></td><td>₦188.4k</td><td>₦101.8k</td><td>₦95.1k</td><td>₦224.2k</td><td>₦66.6k</td><td>₦112k</td></tr>
+                        <tr style="background:#f1f5f9; font-weight:bold;"><td>TOTAL COMBINED MONTHLY SPENT</td><td>₦94.6m</td><td>₦68.1m</td><td>₦83m</td><td>₦104.4m</td><td>₦75.5m</td><td>₦56.2m</td></tr>
+                        <tr style="background:#f8fafc; font-weight:bold; color:var(--green)"><td>NET GROSS REALIZED PROFIT</td><td>₦15.9m</td><td>₦11.5m</td><td>₦8.1m</td><td>₦9.1m</td><td>₦12.2m</td><td>₦7.3m</td></tr>
+                        <tr><td><b>Margin Realized After Sales</b></td><td>14%</td><td>14%</td><td>9%</td><td>8%</td><td>14%</td><td>12%</td></tr>
+                        <tr><td><b>Final Margin After All Expenses</b></td><td>2%</td><td>3%</td><td class="r">-9%</td><td>3%</td><td>1%</td><td>No Data</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <!-- NAVIGATION JAVASCRIPT -->
+    <!-- LOGISTICS -->
+    <div id="page-logistics" class="page">
+        <div class="fixed-header-container"><header><h1>ENERGYMALL LOGISTICS</h1><div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>SUCCESS</b></span></div></header></div>
+        <div class="scrollable-content">
+            <div class="stats">
+                <div class="card"><div class="lbl">H1 2026 Deliveries</div><div class="val w-m">238 Done</div><div class="g">Up from 221</div></div>
+                <div class="card"><div class="lbl">Unique Partners</div><div class="val w-m">138 Providers</div><div class="g">Expanded Network</div></div>
+                <div class="card"><div class="lbl">Lagos Delivery Time</div><div class="val" style="color:var(--red)">7-11 Hours</div><div class="r">Slight Delay</div></div>
+                <div class="card"><div class="lbl">Outside Lagos Time</div><div class="val w-m">48-72 Hours</div><div class="g">Stable Performance</div></div>
+            </div>
+            <div class="tbl-wrap">
+                <table>
+                    <thead><tr><th>Logistics Medium Breakdown</th><th>Units</th><th>Percentage Share</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Dispatch Bike</b></td><td>37</td><td>26.81%</td></tr>
+                        <tr><td><b>Outside Lagos Haulage</b></td><td>51</td><td>36.96%</td></tr>
+                        <tr><td><b>Private Keke Fleet</b></td><td>32</td><td>23.19%</td></tr>
+                        <tr><td><b>Private Vehicles (Cars)</b></td><td>13</td><td>9.42%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION INTERACTIVE DESIGNS -->
     <script>
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
-            
-            const targetPage = document.getElementById('page-' + pageId);
-            if(targetPage) {
-                targetPage.classList.add('active');
-                window.scrollTo(0, 0);
-            }
-        }
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        const target = document.getElementById('page-' + pageId);
+        if (target) target.classList.add('active');
+    }
     </script>
 </body>
 </html>
