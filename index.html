@@ -24,7 +24,8 @@
         header { border-bottom: 2px solid var(--primary); padding-bottom: 4px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
         h1 { font-size: 15px; color: var(--primary); font-weight: bold; }
         .meta { display: flex; gap: 15px; color: var(--muted); font-weight: 600; align-items: center; }
-        h2 { font-size: 12px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin: 15px 0 6px 0; border-left: 3px solid var(--primary); padding-left: 5px; }
+        h2 { font-size: 12px; color: var(--primary); font-weight: bold; text-transform: uppercase; margin: 10px 0 4px 0; border-left: 3px solid var(--primary); padding-left: 5px; }
+        h3 { font-size: 11px; color: var(--text); font-weight: bold; margin: 8px 0 4px 0; text-transform: uppercase; }
         
         /* Scrollable Body Content Wrapper */
         .scrollable-content {
@@ -42,7 +43,7 @@
         .lbl { color: #94a3b8; font-size: 9px; text-transform: uppercase; font-weight: 600; }
         .val { color: #ffffff; font-size: 14px; font-weight: 700; margin-top: 2px; }
         
-        .tbl-wrap { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: #ffffff; margin-bottom: 12px; }
+        .tbl-wrap { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: #ffffff; margin-bottom: 8px; }
         table { width: 100%; border-collapse: collapse; text-align: left; }
         th { background: #f1f5f9; font-weight: 700; padding: 4px 6px; border-bottom: 2px solid var(--border); text-transform: uppercase; font-size: 9px; }
         td { padding: 4px 6px; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
@@ -61,15 +62,395 @@
         <header><h1>ENERGYMALL H1 PERFORMANCE DASHBOARD (JAN - JUN 2026)</h1></header>
         <div class="menu-grid">
             <div class="menu-btn" onclick="showPage('marketing')">B2C Marketing Performance</div>
-            <div class="menu-btn" onclick="showPage('enterprise')">Enterprise Marketing</div>
             <div class="menu-btn" onclick="showPage('sales')">B2C Sales Performance</div>
             <div class="menu-btn" onclick="showPage('product')">Product Management Review</div>
             <div class="menu-btn" onclick="showPage('it')">Web Support & IT Review</div>
             <div class="menu-btn" onclick="showPage('service-mktg')">Service Marketing Hub</div>
             <div class="menu-btn" onclick="showPage('service-ops')">Service Reps & Technical Ops</div>
             <div class="menu-btn" onclick="showPage('finance')">Finance & Procurement Dashboard</div>
+            <div class="menu-btn" onclick="showPage('logistics')">Logistics</div>
         </div>
     </div>
+
+<!-- Logistics -->
+
+<div id="page-logistics" class="page">
+
+    <div class="fixed-header-container">
+
+        <header>
+
+            <h1>ENERGYMALL H1 REVIEW — LOGISTICS</h1>
+
+            <div class="meta">
+
+                <button class="btn-back" onclick="showPage('outline')">MENU</button>
+
+                <span>LEAD: <b>SUCCESS</b></span>
+
+            </div>
+        </header>
+    </div>
+
+    <div id="logistics-report" class="report-section" style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#333;line-height:1.6;max-width:1000px;margin:40px auto;padding:20px;">
+
+
+
+<!-- Section Header -->
+
+    <div style="border-left: 5px solid #008080; padding-left: 15px; margin-bottom: 30px;">
+
+        <h1 style="color: #008080; margin: 0 0 10px 0; font-size: 28px; font-weight: 700;">H1 2026 Logistics & Operations Report</h1>
+
+        <p style="color: #666; margin: 0; font-size: 14px;">Energymall Half-Year Performance Review (Compared with H1 2025)</p>
+
+    </div>
+
+
+
+    <!-- 1. KEY PERFORMANCE INDICATORS -->
+
+    <div style="margin-bottom: 35px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; border: 1px solid #eaeaea;">
+
+        <h2 style="color: #2c3e50; font-size: 18px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">1. Key Performance Indicators (KPIs)</h2>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+
+            <thead>
+
+                <tr style="background-color: #f8f9fa;">
+
+                    <th style="padding: 12px; border-bottom: 2px solid #dee2e6; color: #495057;">LOGISTICS</th>
+
+                    <th style="padding: 12px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">2026</th>
+
+                    <th style="padding: 12px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">2025</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr style="border-bottom: 1px solid #dee2e6;">
+
+                    <td style="padding: 12px; font-weight: 600;">Deliveries</td>
+
+                    <td style="padding: 12px; text-align: center; font-weight: bold; color: #008080;">238</td>
+
+                    <td style="padding: 12px; text-align: center;">221</td>
+
+                </tr>
+
+                <tr style="border-bottom: 1px solid #dee2e6;">
+
+                    <td style="padding: 12px; font-weight: 600;">Unique Delivery company or personal used</td>
+
+                    <td style="padding: 12px; text-align: center; font-weight: bold; color: #008080;">138</td>
+
+                    <td style="padding: 12px; text-align: center;">82</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- 2. DELIVERY MEDIUM BREAKDOWN & TURNAROUND TIME -->
+
+    <div style="display: table; width: 100%; table-layout: fixed; margin-bottom: 35px; border-spacing: 15px 0; margin-left: -15px; margin-right: -15px;">
+
+        
+
+        <!-- Delivery Medium Breakdown -->
+
+        <div style="display: table-cell; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; vertical-align: top; border: 1px solid #eaeaea;">
+
+            <h2 style="color: #2c3e50; font-size: 17px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">2. Delivery Medium Breakdown</h2>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px;">
+
+                <thead>
+
+                    <tr style="background-color: #f8f9fa;">
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6;">Medium</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">Numbers</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">%</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px;">Dispatch Bike</td>
+
+                        <td style="padding: 10px; text-align: center;">37</td>
+
+                        <td style="padding: 10px; text-align: center;">26.81%</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px;">Transport Business (For Outside Lagos Deliveries)</td>
+
+                        <td style="padding: 10px; text-align: center;">3</td>
+
+                        <td style="padding: 10px; text-align: center;">2.17%</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px;">Transport Business (For Outside Lagos Deliveries) - Haulage</td>
+
+                        <td style="padding: 10px; text-align: center;">51</td>
+
+                        <td style="padding: 10px; text-align: center;">36.96%</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px;">Private Car</td>
+
+                        <td style="padding: 10px; text-align: center;">13</td>
+
+                        <td style="padding: 10px; text-align: center;">9.42%</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px;">Private Keke</td>
+
+                        <td style="padding: 10px; text-align: center;">32</td>
+
+                        <td style="padding: 10px; text-align: center;">23.19%</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Turnaround Time & Personnel -->
+
+        <div style="display: table-cell; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; vertical-align: top; border: 1px solid #eaeaea;">
+
+            <h2 style="color: #2c3e50; font-size: 17px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">3. Delivery Time</h2>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; margin-bottom: 25px;">
+
+                <thead>
+
+                    <tr style="background-color: #f8f9fa;">
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6;">Region</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">2026</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center;">2025</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px; font-weight: 600;">Lagos</td>
+
+                        <td style="padding: 10px; text-align: center; color: #dc3545; font-weight: bold;">7 to 11 Hours</td>
+
+                        <td style="padding: 10px; text-align: center;">7 to 9 Hours</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #eee;">
+
+                        <td style="padding: 10px; font-weight: 600;">Outside Lagos</td>
+
+                        <td style="padding: 10px; text-align: center; color: #28a745; font-weight: bold;">48 to 72 Hours</td>
+
+                        <td style="padding: 10px; text-align: center;">48 to 72 Hours</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+
+            <h2 style="color: #2c3e50; font-size: 17px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">4. Personnel Breakdown</h2>
+
+            <div style="padding-top: 5px; font-size: 14px;">
+
+                <p style="margin: 5px 0;"><strong>Success:</strong> <span style="font-weight: bold; color: #008080;">108</span></p>
+
+                <div style="background: #f8f9fa; border: 1px solid #eee; padding: 12px; border-radius: 4px; margin-top: 10px;">
+
+                    <div style="margin-bottom: 8px;">
+
+                        <span style="display:inline-block; width: 80px; font-weight: 600;">John:</span> 
+
+                        <span style="background: #008080; color: white; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: bold;">58</span>
+
+                    </div>
+
+                    <div>
+
+                        <span style="display:inline-block; width: 80px; font-weight: 600;">Samuel:</span> 
+
+                        <span style="background: #20b2aa; color: white; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: bold;">50</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 5. REGIONAL BREAKDOWN TABLE -->
+
+    <div style="margin-bottom: 35px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; border-radius: 6px; border: 1px solid #eaeaea;">
+
+        <h2 style="color: #2c3e50; font-size: 18px; border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; margin-top: 0;">5. State Performance Breakdown</h2>
+
+        <div style="max-height: 500px; overflow-y: auto; margin-top: 15px; border: 1px solid #dee2e6; border-radius: 4px;">
+
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;">
+
+                <thead style="position: sticky; top: 0; background-color: #f8f9fa; z-index: 1;">
+
+                    <tr>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; color: #495057;">State</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">Orders</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">Revenue</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">Customers</th>
+
+                        <th style="padding: 10px; border-bottom: 2px solid #dee2e6; text-align: center; color: #495057;">AVG Orders Per Month</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr style="background-color: #f1f9f9; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+
+                        <td style="padding: 10px;">Lagos</td><td style="padding: 10px; text-align: center;">152</td><td style="padding: 10px; text-align: center;">65.71%</td><td style="padding: 10px; text-align: center;">64.41%</td><td style="padding: 10px; text-align: center;">25</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;">
+
+                        <td style="padding: 10px; font-weight: 600;">Federal Capital Territory</td><td style="padding: 10px; text-align: center;">18</td><td style="padding: 10px; text-align: center;">8.05%</td><td style="padding: 10px; text-align: center;">7.63%</td><td style="padding: 10px; text-align: center;">3</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;">
+
+                        <td style="padding: 10px; font-weight: 600;">Delta</td><td style="padding: 10px; text-align: center;">10</td><td style="padding: 10px; text-align: center;">4.11%</td><td style="padding: 10px; text-align: center;">4.24%</td><td style="padding: 10px; text-align: center;">2</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;">
+
+                        <td style="padding: 10px; font-weight: 600;">Rivers</td><td style="padding: 10px; text-align: center;">9</td><td style="padding: 10px; text-align: center;">4.99%</td><td style="padding: 10px; text-align: center;">3.81%</td><td style="padding: 10px; text-align: center;">2</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;">
+
+                        <td style="padding: 10px; font-weight: 600;">Ogun</td><td style="padding: 10px; text-align: center;">9</td><td style="padding: 10px; text-align: center;">4.43%</td><td style="padding: 10px; text-align: center;">3.81%</td><td style="padding: 10px; text-align: center;">2</td>
+
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Oyo</td><td style="padding: 10px; text-align: center;">5</td><td style="padding: 10px; text-align: center;">0.71%</td><td style="padding: 10px; text-align: center;">2.12%</td><td style="padding: 10px; text-align: center;">1</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Anambra</td><td style="padding: 10px; text-align: center;">4</td><td style="padding: 10px; text-align: center;">2.12%</td><td style="padding: 10px; text-align: center;">1.69%</td><td style="padding: 10px; text-align: center;">1</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Akwa Ibom</td><td style="padding: 10px; text-align: center;">4</td><td style="padding: 10px; text-align: center;">1.03%</td><td style="padding: 10px; text-align: center;">1.69%</td><td style="padding: 10px; text-align: center;">1</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Cross River</td><td style="padding: 10px; text-align: center;">3</td><td style="padding: 10px; text-align: center;">0.58%</td><td style="padding: 10px; text-align: center;">1.27%</td><td style="padding: 10px; text-align: center;">1</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Osun</td><td style="padding: 10px; text-align: center;">3</td><td style="padding: 10px; text-align: center;">1.06%</td><td style="padding: 10px; text-align: center;">1.27%</td><td style="padding: 10px; text-align: center;">1</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Imo</td><td style="padding: 10px; text-align: center;">3</td><td style="padding: 10px; text-align: center;">0.81%</td><td style="padding: 10px; text-align: center;">1.27%</td><td style="padding: 10px; text-align: center;">1</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Edo</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">1.89%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Niger</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">0.14%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Ebonyi</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">0.49%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Abia</td><td style="padding: 10px; text-align: center;">2</td><td style="padding: 10px; text-align: center;">1.22%</td><td style="padding: 10px; text-align: center;">0.85%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Katsina</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.16%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Benue</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.03%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Kogi</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">1.04%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Ondo</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.19%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Adamawa</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.15%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Borno</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.17%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Ekiti</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.37%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="border-bottom: 1px solid #dee2e6;"><td style="padding: 10px;">Enugu</td><td style="padding: 10px; text-align: center;">1</td><td style="padding: 10px; text-align: center;">0.53%</td><td style="padding: 10px; text-align: center;">0.42%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <!-- Dormant / Zero Volume Regions -->
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Kaduna</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Kwara</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Nasarawa</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Kano</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Plateau</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Bauchi</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Sokoto</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                    <tr style="color: #bbb; border-bottom: 1px solid #dee2e6; background-color: #fafafa;"><td style="padding: 10px;">Gombe</td><td style="padding: 10px; text-align: center;">0</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0.00%</td><td style="padding: 10px; text-align: center;">0</td></tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        </div>
+</div>
+<!-- LOGISTICS DEPARTMENT END --
 
     <!-- MARKETING DEPARTMENT -->
     <div id="page-marketing" class="page">
@@ -89,53 +470,16 @@
             <h2>B2C MARKETING YoY KPI MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th></tr></thead>
+                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th><th>Analysis & Context</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Videos Created</b></td><td>131</td><td>95</td><td class="g">+36</td><td class="g">37.89%</td></tr>
-                        <tr><td><b>Leads</b></td><td>1,784 Leads</td><td>2,394 Leads</td><td class="r">-610 Leads</td><td class="r">-25.48%</td></tr>
-                        <tr><td><b>Engagement</b></td><td>8,136</td><td>117,189</td><td class="r">-109,053</td><td class="r">-93.06%</td></tr>
-                        <tr><td><b>Views</b></td><td>197,632</td><td>17,823,688</td><td class="r">-17,626,056</td><td class="r">-98.89%</td></tr>
-                        <tr><td><b>Organic Reach</b></td><td>64,794</td><td>40,500</td><td class="g">+24,294</td><td class="g">59.99%</td></tr>
-                        <tr><td><b>Ad Reach</b></td><td>0</td><td>13,659,941</td><td class="r">-13,656,971</td><td class="r">-100.0%</td></tr>
-                        <tr><td><b>Total Reach</b></td><td>68,264</td><td>13,700,441</td><td class="r">-13,632,177</td><td class="r">-99.50%</td></tr>
-                        <tr><td><b>New Followers</b></td><td>59</td><td>133</td><td class="r">-54</td><td class="r">-71.05%</td></tr>
-                        <tr><td><b>Articles</b></td><td>22</td><td>76</td><td class="r">-54</td><td class="r">-71.05%</td></tr>
-                        <tr><td><b>Facebook Post</b></td><td>279</td><td>90</td><td class="g">+189</td><td class="g">210.00%</td></tr>
-                        <tr><td><b>Instagram Post</b></td><td>304</td><td>90</td><td class="g">+214</td><td class="g">237.78%</td></tr>
-                        <tr><td><b>Tiktok Post</b></td><td>271</td><td>91</td><td class="g">+180</td><td class="g">197.80%</td></tr>
-                        <tr><td><b>Website Traffic From Socials</b></td><td>786,263</td><td>382,610</td><td class="g">+403,653</td><td class="g">105.50%</td></tr>
-                        <tr><td><b>SEO Articles</b></td><td>10.8</td><td>14</td><td class="r">-3.2</td><td class="r">-22.86%</td></tr>
-                        <tr><td><b>SEO Ranking</b></td><td>76.3</td><td>85</td><td class="r">-8.7</td><td class="r">-10.24%</td></tr>
-                        <tr><td><b>Traffic From Search</b></td><td>119,090</td><td>126,226</td><td class="r">-7,136</td><td class="r">-5.65%</td></tr>
-                        <tr><td><b>Email Marketing</b></td><td>10</td><td>No Data</td><td>No Data</td><td>No Data</td></tr>
-                        <tr><td><b>Marketing Spend</b></td><td class="g">₦2,504,850.00</td><td>₦19,233,000.00</td><td class="g">-₦16,728,150.00</td><td class="g">-86.98%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>B2C MARKETING 2026 MONTHLY RUN REVIEWS</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>KPI Line Metric</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Videos Created</b></td><td>10</td><td>16</td><td>21</td><td>22</td><td>23</td><td>39</td></tr>
-                        <tr><td><b>Leads</b></td><td>266 Leads</td><td>215 Leads</td><td>358 Leads</td><td>385 Leads</td><td>348 Leads</td><td>212 Leads</td></tr>
-                        <tr><td><b>Engagement</b></td><td>1,009</td><td>934</td><td>714</td><td>502</td><td>1,361</td><td>3,616</td></tr>
-                        <tr><td><b>Views</b></td><td>20,073</td><td>13,703</td><td>14,002</td><td>68,631</td><td>73,995</td><td>7,228</td></tr>
-                        <tr><td><b>Organic Reach</b></td><td>10,413</td><td>5,725</td><td>4,345</td><td>3,187</td><td>4,219</td><td>36,905</td></tr>
-                        <tr><td><b>Ad Reach</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td><b>Total Reach</b></td><td>10,413</td><td>5,725</td><td>4,345</td><td>3,187</td><td>4,219</td><td>40,375</td></tr>
-                        <tr><td><b>New Followers</b></td><td>0</td><td>0</td><td>33</td><td>9</td><td>8</td><td>9</td></tr>
-                        <tr><td><b>Articles</b></td><td>0</td><td>22</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td><b>Facebook Post</b></td><td>43</td><td>44</td><td>51</td><td>43</td><td>59</td><td>39</td></tr>
-                        <tr><td><b>Instagram Post</b></td><td>43</td><td>43</td><td>51</td><td>43</td><td>59</td><td>65</td></tr>
-                        <tr><td><b>Tiktok Post</b></td><td>43</td><td>43</td><td>51</td><td>43</td><td>59</td><td>32</td></tr>
-                        <tr><td><b>Website Traffic From Socials</b></td><td>169,842</td><td>149,750</td><td>134,908</td><td>107,366</td><td>155,473</td><td>68,924</td></tr>
-                        <tr><td><b>SEO Articles</b></td><td>13</td><td>12.8</td><td>10.7</td><td>9.4</td><td>10.3</td><td>11</td></tr>
-                        <tr><td><b>SEO Ranking</b></td><td>78</td><td>78</td><td>76</td><td>75</td><td>75</td><td>83</td></tr>
-                        <tr><td><b>Traffic From Search</b></td><td>16,145</td><td>17,716</td><td>26,090</td><td>22,424</td><td>21,566</td><td>15,149</td></tr>
-                        <tr><td><b>Email Marketing</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>2</td></tr>
-                        <tr><td><b>Marketing Spend</b></td><td>289,750.00</td><td>220,000.00</td><td>558,600.00</td><td>634,500.00</td><td>582,000.00</td><td>220,000.00</td></tr>
+                        <tr><td><b>Videos Created</b></td><td>131</td><td>95</td><td class="g">+36</td><td class="g">37.89%</td><td>Strong increase in video asset pipeline under Rapheal.</td></tr>
+                        <tr><td><b>Leads</b></td><td>1,783 Leads</td><td class="w">2,394 Leads</td><td class="r">-611 Leads</td><td class="r">-25.52%</td><td>Down due to massive cut in paid ad spend.</td></tr>
+                        <tr><td><b>Engagement</b></td><td>8,136</td><td class="w">117,189</td><td class="r">-109,053</td><td class="r">-93.06%</td><td>Significant reduction without ad-boosted interactions.</td></tr>
+                        <tr><td><b>Views</b></td><td>197,632</td><td class="w">17,823,688</td><td class="r">-17,626,056</td><td class="r">-98.89%</td><td>Drastic drop; highlights reliance on historical paid campaigns.</td></tr>
+                        <tr><td><b>Organic Reach</b></td><td>64,794</td><td class="w">40,500</td><td class="g">+24,294</td><td class="g">59.99%</td><td>Positive structural growth via non-paid organic content.</td></tr>
+                        <tr><td><b>Ad Reach</b></td><td>3,470</td><td class="w">13,659,941</td><td class="r">-13,656,471</td><td class="r">-99.97%</td><td>Paid customer acquisition channels practically paused.</td></tr>
+                        <tr><td><b>Website Traffic From Socials</b></td><td>786,263</td><td class="w">382,610</td><td class="g">+403,653</td><td class="g">105.50%</td><td>Superb conversion efficiency from social networks to site.</td></tr>
+                        <tr><td><b>Marketing Spend</b></td><td class="g">₦2,504,850.00</td><td class="w">₦19,233,000.00</td><td class="g">-₦16,728,150.00</td><td class="g">-86.98%</td><td>Incredible cost savings. CAC efficiency maximized.</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -150,9 +494,9 @@
                 <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>PAT</b></span></div>
             </header>
             <div class="stats">
-                <div class="card"><div class="lbl">H1 2026 Total Revenue</div><div class="val" style="color:var(--green)">₦559,090,784.50</div><div class="g">-6.53% YoY</div></div>
-                <div class="card"><div class="lbl">H1 2026 Conversion Efficiency</div><div class="val" style="color:var(--green)">12.89%</div><div class="g">93.30% Efficiency Gain</div></div>
-                <div class="card"><div class="lbl">H1 2026 Volume Transactors</div><div class="val w-m">258 Customers</div><div class="g">84 Return Clients</div></div>
+                <div class="card"><div class="lbl">H1 2026 Total Revenue</div><div class="val" style="color:var(--green)">₦559,090,784.50</div><div class="g">H1 Capture Balance</div></div>
+                <div class="card"><div class="lbl">H1 2026 Conversion Efficiency</div><div class="val" style="color:var(--green)">12.90%</div><div class="g">+93.41% YoY Optimization</div></div>
+                <div class="card"><div class="lbl">H1 2026 Funnel Volume</div><div class="val w-m">258 Customers</div><div class="g">1,783 Allocated Leads</div></div>
                 <div class="card"><div class="lbl">H1 2026 Top Performer</div><div class="val w-m">Immaculate</div><div class="g">₦239.66m Generated</div></div>
             </div>
         </div>
@@ -160,85 +504,11 @@
             <h2>B2C SALES YoY KPI MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>KPI Core Performance Fields</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference Matrix</th><th>% Status</th></tr></thead>
+                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th><th>Analysis</th></tr></thead>
                     <tbody>
-                        <tr><td><b>Revenue</b></td><td class="g">₦559,090,784.50</td><td>₦598,146,378.00</td><td class="r">-₦39,055,593.50</td><td class="r">-6.53%</td></tr>
-                        <tr><td><b>New Customer Revenue</b></td><td class="g">₦379,455,695.50</td><td>₦410,580,892.00</td><td class="r">-₦31,125,196.50</td><td class="r">-7.58%</td></tr>
-                        <tr><td><b>Return Customer Revenue</b></td><td>₦179,635,089.00</td><td>₦187,565,486.00</td><td class="r">-₦7,930,397.00</td><td class="r">-4.23%</td></tr>
-                        <tr><td><b>Customers</b></td><td>258</td><td>221</td><td class="g">+37</td><td class="g">16.74%</td></tr>
-                        <tr><td><b>New Customers</b></td><td>174</td><td>154</td><td class="g">+20</td><td class="g">12.99%</td></tr>
-                        <tr><td><b>Return Customers</b></td><td>84</td><td>67</td><td class="g">+17</td><td class="g">25.37%</td></tr>
-                        <tr><td><b>Leads</b></td><td>1,784 Leads</td><td>2,384</td><td class="r">-600 Leads</td><td class="r">-25.17%</td></tr>
-                        <tr><td><b>Conversion</b></td><td class="g">12.89%</td><td>6.67%</td><td class="g">+6.22%</td><td class="g">93.30%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>MEDIUM OF SALES REPORTING</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Inbound Sales Medium</th><th>Jan-Jun 26 Target</th><th>Jan-Jun 25 Baseline</th><th>Difference Matrix</th><th>Percentage Status</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Sales Team Revenue</b></td><td>₦512,240,102.50</td><td>₦545,481,779.41</td><td class="r">-₦33,241,676.91</td><td class="r">-6.09%</td></tr>
-                        <tr><td><b>The Business Revenue</b></td><td>₦46,850,682.00</td><td>₦52,664,598.59</td><td class="r">-₦5,813,916.59</td><td class="r">-11.04%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>B2C SALES 2026 MONTHLY BREAKDOWN TRACE</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Sales Target Parameters</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Revenue</b></td><td>₦119,042,210.50</td><td>₦110,601,346.00</td><td>₦89,664,750.00</td><td>₦106,526,080.00</td><td>₦80,807,066.00</td><td>₦51,763,100.00</td></tr>
-                        <tr><td><b>New Customer Revenue</b></td><td>₦93,814,250.50</td><td>₦80,110,972.00</td><td>₦46,478,250.00</td><td>₦63,847,080.00</td><td>₦61,924,811.00</td><td>₦32,594,100.00</td></tr>
-                        <tr><td><b>Return Customer Revenue</b></td><td>₦25,227,960.00</td><td>₦30,490,374.00</td><td>₦43,186,500.00</td><td>₦42,679,000.00</td><td>₦18,882,255.00</td><td>₦19,169,000.00</td></tr>
-                        <tr><td><b>Customers</b></td><td>45 Customers</td><td>39 Customers</td><td>47 Customers</td><td>51 Customers</td><td>45 Customers</td><td>31 Customers</td></tr>
-                        <tr><td><b>New Customers</b></td><td>30 Customers</td><td>25 Customers</td><td>28 Customers</td><td>33 Customers</td><td>34 Customers</td><td>24 Customers</td></tr>
-                        <tr><td><b>Return Customers</b></td><td>15</td><td>14</td><td>19</td><td>18</td><td>11</td><td>7</td></tr>
-                        <tr><td><b>Leads</b></td><td>266 Leads</td><td>215 Leads</td><td>358 Leads</td><td>385 Leads</td><td>348 Leads</td><td>212 Leads</td></tr>
-                        <tr><td><b>Conversion</b></td><td>16.92%</td><td>18.14%</td><td>13.13%</td><td>13.25%</td><td>12.93%</td><td>14.62%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>TEAM MEMBERS DIVISION PERFORMANCE MATRIX</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Key Rep Parameter Block</th><th>PAT</th><th>IMMACULATE</th><th>JEMILAH</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Revenue Generated</b></td><td>₦103,426,455.00</td><td class="g">₦239,663,967.50</td><td>₦22,857,480.00</td></tr>
-                        <tr><td><b>Leads Managed Allocations</b></td><td>727</td><td>702</td><td>0</td></tr>
-                        <tr><td><b>Unique Customer Volumes Closed</b></td><td>63</td><td>118</td><td>8</td></tr>
-                        <tr><td><b>Conversion Close Rate</b></td><td>8.67%</td><td class="g">16.81%</td><td>No Data</td></tr>
-                        <tr><td><b>Bonus Commission Earned</b></td><td>₦103,426.46</td><td class="g">₦239,663.97</td><td>₦22,857.48</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>REPS TIMELINE CROSS EXPANSION (MONTH BY MONTH RUNS)</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th rowspan="2">Active Roster Months</th>
-                            <th colspan="3">Revenue Volume Pipeline</th>
-                            <th colspan="3">Customers Volume Closed</th>
-                            <th colspan="3">Leads Allocations Managed</th>
-                        </tr>
-                        <tr>
-                            <th>Pat</th><th>Immaculate</th><th>Jemilah</th>
-                            <th>Pat</th><th>Immaculate</th><th>Jemilah</th>
-                            <th>Pat</th><th>Immaculate</th><th>Jemilah</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><b>January</b></td><td>36,264,512.00</td><td>36,183,773.50</td><td>1,357,825.00</td><td>9</td><td>21</td><td>2</td><td>94</td><td>99</td><td>0</td></tr>
-                        <tr><td><b>February</b></td><td>10,216,712.00</td><td>52,800,034.00</td><td>0.00</td><td>7</td><td>18</td><td>0</td><td>77</td><td>81</td><td>0</td></tr>
-                        <tr><td><b>March</b></td><td>10,237,750.00</td><td>47,374,000.00</td><td>296,000.00</td><td>12</td><td>18</td><td>1</td><td>153</td><td>119</td><td>0</td></tr>
-                        <tr><td><b>April</b></td><td>18,780,680.00</td><td>44,503,450.00</td><td>942,000.00</td><td>15</td><td>24</td><td>1</td><td>186</td><td>131</td><td>0</td></tr>
-                        <tr><td><b>May</b></td><td>19,247,001.00</td><td>23,714,810.00</td><td>14,116,255.00</td><td>15</td><td>14</td><td>2</td><td>169</td><td>135</td><td>0</td></tr>
-                        <tr><td><b>June</b></td><td>8,679,800.00</td><td>35,087,900.00</td><td>6,145,400.00</td><td>5</td><td>23</td><td>2</td><td>48</td><td>137</td><td>0</td></tr>
+                        <tr><td><b>Revenue</b></td><td class="g">₦559,090,784.50</td><td class="w">₦598,146,378.00</td><td class="r">-₦39,055,593.50</td><td class="r">-6.53%</td><td>Highly resilient execution despite extreme top funnel marketing spend reductions.</td></tr>
+                        <tr><td><b>Customers</b></td><td>258</td><td class="w">221</td><td class="g">+37</td><td class="g">16.74%</td><td>Volume of transacting clients expanded.</td></tr>
+                        <tr><td><b>Conversion</b></td><td class="g">12.90%</td><td class="w">6.67%</td><td class="g">+6.23%</td><td class="g">93.41%</td><td>Outstanding functional close optimization by Pat's floor team.</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -253,170 +523,20 @@
                 <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span>LEAD: <b>FUNMI</b></span></div>
             </header>
             <div class="stats">
-                <div class="card"><div class="lbl">Onboarded Volume</div><div class="val w-m">1,444 Products</div><div class="r">-47.41%</div></div>
-                <div class="card"><div class="lbl">Updates Performance</div><div class="val w-m">3,040 Products</div><div class="r">-15.95%</div></div>
-                <div class="card"><div class="lbl">Articles Submitted</div><div class="val w-m">899 Pieces</div><div class="g">+297.79%</div></div>
-                <div class="card"><div class="lbl">Short-Form Content Engine</div><div class="val w-m">23 Videos</div><div class="g">Talking Head Active</div></div>
+                <div class="card"><div class="lbl">Onboarded Volume</div><div class="val w-m">1,444 New Products</div><div class="g">-47.41% Lifecycle Rebalance</div></div>
+                <div class="card"><div class="lbl">Updates Dashboard</div><div class="val w-m">3,040 Products</div><div class="g">Active Integrity Reviews</div></div>
+                <div class="card"><div class="lbl">Brand Content Hub</div><div class="val w-m">899 Articles</div><div class="g">+297.79% Indexing Expand</div></div>
+                <div class="card"><div class="lbl">Short-Form Engine</div><div class="val w-m">23 Videos</div><div class="g">Talking Head Launch Done</div></div>
             </div>
         </div>
         <div class="scrollable-content">
-            <h2>PRODUCT MANAGEMENT YoY KPI MATRIX</h2>
+            <h2>PRODUCT MANAGEMENT SUMMARY</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>KPI Metric Field Descriptor</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference Matrix</th><th>% Change Status</th></tr></thead>
+                    <thead><tr><th>KPI Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Status</th></tr></thead>
                     <tbody>
-                        <tr><td><b>New Products Added</b></td><td>1,444 Products</td><td>2,746</td><td class="r">-1,302 Products</td><td class="r">-47.41%</td></tr>
-                        <tr><td><b>Existing Products Updated</b></td><td>3,040 Products</td><td>3,617</td><td class="r">-577 Products</td><td class="r">-15.95%</td></tr>
-                        <tr><td><b>Number Of Products Promoted</b></td><td>577</td><td>1,145</td><td class="r">-568</td><td class="r">-49.61%</td></tr>
-                        <tr><td><b>Articles</b></td><td class="g">899</td><td>226</td><td class="g">+673</td><td class="g">297.79%</td></tr>
-                        <tr><td><b>Talking Head Videos</b></td><td>23</td><td>NO DATA</td><td>NO DATA</td><td>NO DATA</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>2026 PRODUCT MANAGEMENT MONTHLY PRODUCTION MATRIX</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Operational Task Track</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>New Products Added</b></td><td>190 Products</td><td>297 Products</td><td>182 Products</td><td>344 Products</td><td>244 Products</td><td>187 Products</td></tr>
-                        <tr><td><b>Existing Products Updated</b></td><td>621 Products</td><td>502 Products</td><td>468 Products</td><td>655 Products</td><td>378 Products</td><td>416 Products</td></tr>
-                        <tr><td><b>Number Of Products Promoted</b></td><td>101 Products</td><td>129 Products</td><td>188 Products</td><td>194 Products</td><td>93 Products</td><td>113 Products</td></tr>
-                        <tr><td><b>Articles</b></td><td>67</td><td>95</td><td>169</td><td>175</td><td>150</td><td>210</td></tr>
-                        <tr><td><b>Talking Head Videos</b></td><td>NO DATA</td><td>NO DATA</td><td>NO DATA</td><td>NO DATA</td><td>NO DATA</td><td>23</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>INDIVIDUAL ROSTER PERFORMANCE BREAKDOWN METRICS</h2>
-            
-            <h3>EXISTING PRODUCTS UPDATED BY ASSIGNED ASSOCIATE</h3>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Team Associate - Category Portfolio Group</th><th>Total</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Josiah Favour Oluchi</b> - Cables, Transformers & Electricals</td><td><b>253</b></td><td>42</td><td>22</td><td>27</td><td>34</td><td>43</td><td>63</td></tr>
-                        <tr><td><b>Asia Grace</b> – Water Pump and Insulation</td><td><b>206</b></td><td>20</td><td>27</td><td>37</td><td>40</td><td>32</td><td>50</td></tr>
-                        <tr><td><b>Ishola Abisola</b> – Computer, Network & Connectivity & CCTV</td><td><b>440</b></td><td>27</td><td>52</td><td>55</td><td>87</td><td>101</td><td>118</td></tr>
-                        <tr><td><b>Orumwense Owen</b> - Home Electronics, Lighting, Generators</td><td><b>408</b></td><td>39</td><td>73</td><td>62</td><td>82</td><td>74</td><td>78</td></tr>
-                        <tr><td><b>Sarah Onuoha</b> - Solar 1 (Inverters and Batteries), UPS and Stabilizers</td><td><b>1045</b></td><td>218</td><td>196</td><td>106</td><td>163</td><td>107</td><td>255</td></tr>
-                        <tr><td><b>Funmi</b> - Solar 2 (Charge Controllers, Panels, Solar Generators, Appliances)</td><td><b>525</b></td><td>121</td><td>31</td><td>116</td><td>159</td><td>0</td><td>98</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td>COMBINED TRACK OVERALL RUN</td><td><b>2877</b></td><td>468</td><td>401</td><td>409</td><td>565</td><td>357</td><td>662</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>NEW PRODUCTS ONBOARDED BY ASSIGNED ASSOCIATE</h3>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Team Associate - Category Portfolio Group</th><th>Total</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Josiah Favour Oluchi</b> - Cables, Transformers & Electricals</td><td><b>273</b></td><td>47</td><td>21</td><td>45</td><td>57</td><td>57</td><td>46</td></tr>
-                        <tr><td><b>Asia Grace</b> – Water Pump and Insulation</td><td><b>129</b></td><td>30</td><td>23</td><td>19</td><td>26</td><td>21</td><td>10</td></tr>
-                        <tr><td><b>Ishola Abisola</b> – Computer, Network & Connectivity & CCTV</td><td><b>437</b></td><td>38</td><td>58</td><td>87</td><td>68</td><td>86</td><td>100</td></tr>
-                        <tr><td><b>Orumwense Owen</b> - Home Electronics, Lighting, Generators</td><td><b>227</b></td><td>73</td><td>22</td><td>25</td><td>25</td><td>18</td><td>64</td></tr>
-                        <tr><td><b>Sarah Onuoha</b> - Solar 1 (Inverters and Batteries), UPS and Stabilizers</td><td><b>342</b></td><td>64</td><td>60</td><td>50</td><td>65</td><td>58</td><td>45</td></tr>
-                        <tr><td><b>Funmi</b> - Solar 2 (Charge Controllers, Panels, Solar Generators, Appliances)</td><td><b>17</b></td><td>9</td><td>1</td><td>5</td><td>1</td><td>1</td><td>0</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td>COMBINED TRACK OVERALL RUN</td><td><b>1425</b></td><td>261</td><td>185</td><td>231</td><td>242</td><td>241</td><td>265</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>SEO ARTICLES SUBMITTED BY ASSIGNED ASSOCIATE</h3>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Team Associate - Category Portfolio Group</th><th>Total</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Josiah Favour Oluchi</b> - Cables, Transformers & Electricals</td><td><b>118</b></td><td>11</td><td>15</td><td>13</td><td>27</td><td>20</td><td>32</td></tr>
-                        <tr><td><b>Asia Grace</b> – Water Pump and Insulation</td><td><b>142</b></td><td>10</td><td>27</td><td>25</td><td>20</td><td>20</td><td>40</td></tr>
-                        <tr><td><b>Ishola Abisola</b> – Computer, Network & Connectivity & CCTV</td><td><b>105</b></td><td>14</td><td>18</td><td>24</td><td>14</td><td>15</td><td>20</td></tr>
-                        <tr><td><b>Orumwense Owen</b> - Home Electronics, Lighting, Generators</td><td><b>133</b></td><td>13</td><td>22</td><td>21</td><td>21</td><td>20</td><td>36</td></tr>
-                        <tr><td><b>Sarah Onuoha</b> - Solar 1 (Inverters and Batteries), UPS and Stabilizers</td><td><b>167</b></td><td>11</td><td>44</td><td>25</td><td>32</td><td>20</td><td>35</td></tr>
-                        <tr><td><b>Funmi</b> - Solar 2 (Charge Controllers, Panels, Solar Generators, Appliances)</td><td><b>75</b></td><td>0</td><td>0</td><td>25</td><td>15</td><td>0</td><td>35</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td>COMBINED TRACK OVERALL RUN</td><td><b>740</b></td><td>59</td><td>137</td><td>133</td><td>130</td><td>95</td><td>198</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>PRODUCT PROMOTION VIA CAROUSELS BY ASSIGNED ASSOCIATE</h3>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Team Associate - Category Portfolio Group</th><th>Total</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Josiah Favour Oluchi</b> - Cables, Transformers & Electricals</td><td><b>81</b></td><td>21</td><td>36</td><td>2</td><td>6</td><td>8</td><td>8</td></tr>
-                        <tr><td><b>Asia Grace</b> – Water Pump and Insulation</td><td><b>175</b></td><td>16</td><td>24</td><td>0</td><td>0</td><td>40</td><td>95</td></tr>
-                        <tr><td><b>Ishola Abisola</b> – Computer, Network & Connectivity & CCTV</td><td><b>91</b></td><td>11</td><td>10</td><td>20</td><td>10</td><td>24</td><td>16</td></tr>
-                        <tr><td><b>Orumwense Owen</b> - Home Electronics, Lighting, Generators</td><td><b>186</b></td><td>11</td><td>77</td><td>0</td><td>30</td><td>35</td><td>33</td></tr>
-                        <tr><td><b>Sarah Onuoha</b> - Solar 1 (Inverters and Batteries), UPS and Stabilizers</td><td><b>15</b></td><td>11</td><td>24</td><td>5</td><td>9</td><td>33</td><td>28</td></tr>
-                        <tr><td><b>Funmi</b> - Solar 2 (Charge Controllers, Panels, Solar Generators, Appliances)</td><td><b>7</b></td><td>7</td><td>0</td><td>1</td><td>3</td><td>22</td><td>20</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td>COMBINED TRACK OVERALL RUN</td><td><b>555</b></td><td>77</td><td>171</td><td>28</td><td>58</td><td>162</td><td>200</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>TALKING HEAD ENGAGING VIDEO WITH TRANSLATED TEXT (1 PER CATEGORY WEEKLY)</h3>
-            <div class="tbl-wrap">
-                <table>
-                    <thead><tr><th>Team Associate - Category Portfolio Group</th><th>Total</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
-                    <tbody>
-                        <tr><td><b>Josiah Favour Oluchi</b> - Cables, Transformers & Electricals</td><td><b>2</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr>
-                        <tr><td><b>Asia Grace</b> – Water Pump and Insulation</td><td><b>3</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td></tr>
-                        <tr><td><b>Ishola Abisola</b> – Computer, Network & Connectivity & CCTV</td><td><b>5</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td></tr>
-                        <tr><td><b>Orumwense Owen</b> - Home Electronics, Lighting, Generators</td><td><b>2</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td></tr>
-                        <tr><td><b>Sarah Onuoha</b> - Solar 1 (Inverters and Batteries), UPS and Stabilizers</td><td><b>4</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td></tr>
-                        <tr><td><b>Funmi</b> - Solar 2 (Charge Controllers, Panels, Solar Generators, Appliances)</td><td><b>0</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr style="background:#f1f5f9; font-weight:bold;"><td>COMBINED TRACK OVERALL RUN</td><td><b>16</b></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>16</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>SALES DIVISION SEGMENTATION Matrix (UNITS SOLD BREAKDOWN)</h3>
-            <div class="tbl-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Material Category</th>
-                            <th>TOTAL</th>
-                            <th>% SHARE</th>
-                            <th>JAN</th>
-                            <th>FEB</th>
-                            <th>MAR</th>
-                            <th>APR</th>
-                            <th>MAY</th>
-                            <th>JUN</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Solar Batteries</td><td><b>430</b></td><td>3.3%</td><td>47</td><td>144</td><td>83</td><td>45</td><td>60</td><td>51</td></tr>
-                        <tr><td>Inverters</td><td><b>126</b></td><td>1.0%</td><td>32</td><td>22</td><td>22</td><td>23</td><td>14</td><td>13</td></tr>
-                        <tr><td>Solar Panels</td><td><b>662</b></td><td>5.1%</td><td>36</td><td>244</td><td>88</td><td>207</td><td>49</td><td>38</td></tr>
-                        <tr><td>Solar/Inverter Bundles</td><td><b>2</b></td><td>0.0%</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-                        <tr><td>Solar Home Appliances</td><td><b>3</b></td><td>0.0%</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
-                        <tr><td>Solar Freezer Bundles</td><td><b>3</b></td><td>0.0%</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td></tr>
-                        <tr><td>Solar Accessories</td><td><b>3</b></td><td>0.0%</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td></tr>
-                        <tr><td>Charge Controllers</td><td><b>18</b></td><td>0.1%</td><td>0</td><td>3</td><td>4</td><td>5</td><td>5</td><td>1</td></tr>
-                        <tr><td>Portable Power Station</td><td><b>5</b></td><td>0.0%</td><td>0</td><td>0</td><td>1</td><td>2</td><td>2</td><td>0</td></tr>
-                        <tr><td>Inverter Parts & Accessories</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Generators</td><td><b>1</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-                        <tr><td>Car Batteries</td><td><b>1</b></td><td>0.0%</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Water Pumps</td><td><b>25</b></td><td>0.2%</td><td>6</td><td>6</td><td>4</td><td>4</td><td>3</td><td>2</td></tr>
-                        <tr><td>Water Pump Bundles</td><td><b>1</b></td><td>0.0%</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Cables</td><td><b>10,847</b></td><td>83.3%</td><td>342</td><td>951</td><td>2,116</td><td>5,824</td><td>327</td><td>1,287</td></tr>
-                        <tr><td>Cable Accessories</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Home Electronics</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Electrical Accessories</td><td><b>593</b></td><td>4.6%</td><td>12</td><td>65</td><td>36</td><td>62</td><td>373</td><td>45</td></tr>
-                        <tr><td>Transformers</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Lighting</td><td><b>111</b></td><td>0.9%</td><td>7</td><td>104</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Solar Streetlights & Floodlights</td><td><b>9</b></td><td>0.1%</td><td>0</td><td>6</td><td>0</td><td>0</td><td>1</td><td>2</td></tr>
-                        <tr><td>Ups & Stabilizers</td><td><b>4</b></td><td>0.0%</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>1</td></tr>
-                        <tr><td>Computers & Office Equipment</td><td><b>3</b></td><td>0.0%</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Insulation Materials</td><td><b>164</b></td><td>1.3%</td><td>0</td><td>3</td><td>0</td><td>5</td><td>61</td><td>95</td></tr>
-                        <tr><td>Insulation Accessories</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Cctv & Security Systems</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Networking And Connectivity</td><td><b>0</b></td><td>0.0%</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Commercial/Industrial Kitchen Appliances</td><td><b>3</b></td><td>0.0%</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr><td>Installation and Accessories</td><td><b>3</b></td><td>0.0%</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-                        <tr style="background:#f8fafc; font-weight:bold;"><td>GRAND TOTAL MATRIX SUM</td><td><b>13,017</b></td><td>100.00%</td><td>492</td><td>1,760</td><td>2,381</td><td>6,393</td><td>919</td><td>1,072</td></tr>
+                        <tr><td><b>New Products Added</b></td><td>1,444</td><td>2,746</td><td class="r">-1,302</td><td class="r">-47.41%</td></tr>
+                        <tr><td><b>Articles Submitted</b></td><td>899</td><td>226</td><td class="g">+673</td><td class="g">297.79%</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -434,62 +554,17 @@
                 <div class="card"><div class="lbl">H1 Overall Traffic Volume</div><div class="val w-m">926,798 Hits</div><div class="g">+82.14% Traffic Surge</div></div>
                 <div class="card"><div class="lbl">Total Website Products</div><div class="val w-m">13,373 Products</div><div class="g">+8.72% Catalog Growth</div></div>
                 <div class="card"><div class="lbl">Existing Products Updated</div><div class="val w-m">33,112 Items</div><div class="g">+10.74% Database Ops</div></div>
-                <div class="card"><div class="lbl">SEO Performance Profile</div><div class="val w-m">77 Score</div><div class="r">-8.92% Variance Shift</div></div>
+                <div class="card"><div class="lbl">New Products Onboarded</div><div class="val w-m">779 Items</div><div class="g">+140.43% Inventory</div></div>
             </div>
         </div>
         <div class="scrollable-content">
-            <h2>WEB SUPPORT & IT COMPARATIVE KPI MATRIX (YoY)</h2>
+            <h2>WEB SUPPORT YoY KPI MATRIX</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead>
-                        <tr>
-                            <th>KPI Core Parameter Field</th>
-                            <th>Jan-Jun 26 Achieved</th>
-                            <th>Jan-Jun 25 Achieved</th>
-                            <th>Difference Matrix</th>
-                            <th>Percentage Change</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>KPI Metric Descriptor</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference Matrix</th><th>% Status</th></tr></thead>
                     <tbody>
-                        <tr><td><b>SEO Score</b></td><td>77</td><td>85</td><td class="r">-8</td><td class="r">-8.92%</td></tr>
-                        <tr><td><b>Number Of Articles</b></td><td>181</td><td>391</td><td class="r">-210</td><td class="r">-53.71%</td></tr>
-                        <tr><td><b>New Product Added</b></td><td>779</td><td>324</td><td class="g">+455</td><td class="g">140.43%</td></tr>
-                        <tr><td><b>Existing Product Updated</b></td><td>3,311</td><td>2990</td><td class="g">+321</td><td class="g">10.74%</td></tr>
-                        <tr><td><b>Update Cycles - 4</b></td><td>23</td><td>23</td><td>0</td><td>0.00%</td></tr>
-                        <tr><td><b>Categories Updated</b></td><td>104</td><td>32</td><td class="g">+72</td><td class="g">225.00%</td></tr>
-                        <tr><td><b>Website Traffic From Search</b></td><td>122,596</td><td>126,227</td><td class="r">-3,631</td><td class="r">-2.88%</td></tr>
-                        <tr><td><b>Traffic From Social & Direct</b></td><td class="g">804,202</td><td>263,769</td><td class="g">+540,433</td><td class="g">161.12%</td></tr>
-                        <tr><td><b>Overall Traffic</b></td><td class="g">926,798</td><td>508,842</td><td class="g">+417,956</td><td class="g">82.14%</td></tr>
-                        <tr><td><b>Total Website Products</b></td><td>13,373</td><td>12,300</td><td class="g">+1,073</td><td class="g">8.72%</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>2026 WEB SUPPORT MONTHLY HISTORICAL RUN TRACKER</h2>
-            <div class="tbl-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Web Support Operations Metric</th>
-                            <th>January</th>
-                            <th>February</th>
-                            <th>March</th>
-                            <th>April</th>
-                            <th>May</th>
-                            <th>June</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><b>SEO Score</b></td><td>78</td><td>78</td><td>76</td><td>75</td><td>75</td><td>83</td></tr>
-                        <tr><td><b>Number Of Articles</b></td><td>21</td><td>28</td><td>26</td><td>36</td><td>31</td><td>39</td></tr>
-                        <tr><td><b>New Product Added</b></td><td>21</td><td>56</td><td>210</td><td>61</td><td>264</td><td>167</td></tr>
-                        <tr><td><b>Existing Product Updated</b></td><td>6,545</td><td>3,541</td><td>3,696</td><td>3,906</td><td>2,343</td><td>13,081</td></tr>
-                        <tr><td><b>Update Cycles - 4</b></td><td>3</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
-                        <tr><td><b>Categories Updated</b></td><td>16</td><td>19</td><td>18</td><td>16</td><td>13</td><td>22</td></tr>
-                        <tr><td><b>Website Traffic From Search</b></td><td>16,145</td><td>17,716</td><td>26,090</td><td>22,424</td><td>21,566</td><td>18,655</td></tr>
-                        <tr><td><b>Traffic From Social & Direct</b></td><td>169,842</td><td>149,750</td><td>134,908</td><td>107,366</td><td>155,473</td><td>86,863</td></tr>
-                        <tr><td><b>Overall Traffic</b></td><td>185,987</td><td>167,466</td><td>160,998</td><td>129,790</td><td>177,039</td><td>105,518</td></tr>
-                        <tr><td><b>Total Website Products</b></td><td>13,133</td><td>13,227</td><td>13,307</td><td>13,392</td><td>13,510</td><td>13,668</td></tr>
+                        <tr><td><b>Traffic From Social & Direct</b></td><td class="g">804,202 Hits</td><td>263,769 Hits</td><td class="g">+540,433 Hits</td><td class="g">161.12%</td></tr>
+                        <tr><td><b>Overall Traffic</b></td><td class="g">926,798 Hits</td><td>508,842 Hits</td><td class="g">+417,956 Hits</td><td class="g">82.14%</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -517,20 +592,24 @@
                 <table>
                     <thead><tr><th>Segment Portfolio</th><th>KPI Metric Name</th><th>Achieved Jan-Jun 26</th><th>Strategic Context / Performance Scope</th></tr></thead>
                     <tbody>
+                        <!-- Email Tracking Group -->
                         <tr><td rowspan="5"><b>EMAIL MARKETING</b></td><td>No Of Email Addresses Generated</td><td>18,818</td><td>Aggressive contact onboarding validation processes.</td></tr>
                         <tr><td>No Of Email Addresses Sent</td><td>9,569</td><td>Core customer deployment engagement target pool.</td></tr>
                         <tr><td>No Email Campaign Blasts Sent</td><td>20</td><td>Broadcast strategy run intervals.</td></tr>
                         <tr><td>Email Open Rate (%)</td><td>5.39%</td><td>Baseline engagement level across active workflows.</td></tr>
                         <tr><td>No Of Leads Generated From Emails</td><td>29</td><td>Inbound conversion indicators from targeted updates.</td></tr>
+                        <!-- Organic Group -->
                         <tr><td rowspan="4"><b>ORGANIC NETWORKS</b></td><td>Total Number Of Organic Post On FB/IG/TT</td><td>26</td><td>Cross-platform content generation baseline profiles.</td></tr>
                         <tr><td>Total Reach On Social Media</td><td>3,818</td><td>Brand distribution reach baseline metrics.</td></tr>
                         <tr><td>Total Engagement From Social Media</td><td>391</td><td>User reaction footprint loops.</td></tr>
                         <tr><td>Total Traffic From Social Media</td><td>3,621</td><td>Highly efficient inbound routing architecture.</td></tr>
+                        <!-- SEO Group -->
                         <tr><td rowspan="5"><b>SEO ARCHITECTURE</b></td><td>Total Articles Done</td><td>57</td><td>Informational search engine visibility layers.</td></tr>
                         <tr><td>Keyword Ranking For Service Website</td><td>0</td><td>High authority landing structures require adjustments.</td></tr>
                         <tr><td>SEO Category Ranking</td><td>116</td><td>Structural taxonomy verification benchmarks.</td></tr>
                         <tr><td>SEO Overall Ranking</td><td>189.33</td><td>Aggregated score footprint indices.</td></tr>
                         <tr><td>Total Website Traffic From Search</td><td>11,771</td><td>Organic core discovery routing pipelines.</td></tr>
+                        <!-- Final Conversion Wrap -->
                         <tr style="background:#f8fafc; font-weight:bold;"><td><b>SUMMARY MATRIX</b></td><td>TOTAL LEADS FROM SERVICE CHANNELS</td><td class="g">14</td><td>Unified service request routing acquisitions completed.</td></tr>
                     </tbody>
                 </table>
@@ -539,22 +618,26 @@
             <h2>SERVICE MARKETING 2026 MONTHLY RUN REVIEWS</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Channel Class</th><th>KPI Line Metric</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
+                    <thead><tr><th>Channel Class</th><th>KPI Line Metric</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
                     <tbody>
-                        <tr><td rowspan="5"><b>EMAIL DATA</b></td><td>Email Addresses Generated</td><td>NO DATA</td><td>NO DATA</td><td>33</td><td>7,091</td><td>4,163</td><td>7,531</td></tr>
+                        <!-- Email -->
+                        <tr><td rowspan="5"><b>EMAIL DATA</b></td><td>Email Addresses Generated</td><td>NO DATA</td><td>NO DATA</td><td>33</td><td>7,091</td><td>4,163</td><td class="g">7,531</td></tr>
                         <tr><td>Email Addresses Sent</td><td>NO DATA</td><td>NO DATA</td><td>60</td><td>2,435</td><td>4,545</td><td>2,529</td></tr>
                         <tr><td>Campaign Blasts Sent</td><td>NO DATA</td><td>NO DATA</td><td>5</td><td>10</td><td>3</td><td>2</td></tr>
-                        <tr><td>Email Open Rate (%)</td><td>NO DATA</td><td>NO DATA</td><td>3.56%</td><td>10.10%</td><td>8.63%</td><td>10.11%</td></tr>
-                        <tr><td>Leads From Emails</td><td>NO DATA</td><td>NO DATA</td><td>1</td><td>7</td><td>10</td><td>11</td></tr>
+                        <tr><td>Email Open Rate (%)</td><td>NO DATA</td><td>NO DATA</td><td>3.56%</td><td class="g">10.10%</td><td>8.63%</td><td class="g">10.11%</td></tr>
+                        <tr><td>Leads From Emails</td><td>NO DATA</td><td>NO DATA</td><td>1</td><td>7</td><td>10</td><td class="g">11</td></tr>
+                        <!-- Organic -->
                         <tr><td rowspan="4"><b>ORGANIC SOCIAL</b></td><td>Organic Posts (FB/IG/TT)</td><td>NO DATA</td><td>NO DATA</td><td>10</td><td>9</td><td>5</td><td>2</td></tr>
                         <tr><td>Social Media Total Reach</td><td>NO DATA</td><td>NO DATA</td><td>883</td><td>1,426</td><td>1,205</td><td>304</td></tr>
                         <tr><td>Social Media Engagement</td><td>NO DATA</td><td>NO DATA</td><td>140</td><td>139</td><td>87</td><td>25</td></tr>
                         <tr><td>Social Media Total Traffic</td><td>NO DATA</td><td>NO DATA</td><td>0</td><td>0</td><td>3,415</td><td>206</td></tr>
+                        <!-- SEO -->
                         <tr><td rowspan="5"><b>SEO DISCOVERY</b></td><td>Total Articles Finished</td><td>NO DATA</td><td>NO DATA</td><td>21</td><td>18</td><td>10</td><td>8</td></tr>
                         <tr><td>Keyword Service Ranking</td><td>NO DATA</td><td>NO DATA</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
                         <tr><td>SEO Category Ranking</td><td>NO DATA</td><td>NO DATA</td><td>0</td><td>0</td><td>116</td><td>0</td></tr>
                         <tr><td>SEO Overall Ranking</td><td>NO DATA</td><td>NO DATA</td><td>77.50</td><td>4.50</td><td>38.50</td><td>18.30</td></tr>
                         <tr><td>Search Website Traffic</td><td>NO DATA</td><td>NO DATA</td><td>100</td><td>5,636</td><td>2,431</td><td>3,604</td></tr>
+                        <!-- Summary -->
                         <tr style="background:#f1f5f9; font-weight:bold;"><td><b>FINAL SUM</b></td><td>TOTAL LEADS GENERATED</td><td>NO DATA</td><td>NO DATA</td><td class="g">14</td><td>0</td><td>0</td><td>0</td></tr>
                     </tbody>
                 </table>
@@ -573,7 +656,7 @@
                 <div class="card"><div class="lbl">Service Operations Revenue</div><div class="val" style="color:var(--green)">₦1,290,500.00</div><div class="g">+104.84% YoY Growth</div></div>
                 <div class="card"><div class="lbl">Cross-Sales Closed Revenue</div><div class="val" style="color:var(--green)">₦22,898,480.00</div><div class="g">Associated Product Sales</div></div>
                 <div class="card"><div class="lbl">Technical Repairs Success</div><div class="val w-m">95.35% Completed</div><div class="g">41 of 43 Fulfilled</div></div>
-                <div class="card"><div class="lbl">Total Requests Managed</div><div class="val w-m">85 Service Tickets</div><div class="g">+54.55% Volume Scale</div></div>
+                <div class="card"><div class="lbl">Total Requests Managed</div><div class="val w-m">85 Service Tickets</td><div class="g">+54.55% Volume Scale</div></div>
             </div>
         </div>
         
@@ -583,6 +666,7 @@
                 <table>
                     <thead><tr><th>Operational Area</th><th>KPI Target Metric</th><th>Jan-Jun 26</th><th>Jan-Jun 25</th><th>Difference</th><th>% Change Status</th></tr></thead>
                     <tbody>
+                        <!-- Reps Section -->
                         <tr><td rowspan="9"><b>SERVICE REPS PERFORMANCE</b></td><td>Number Of Service Requests Received</td><td>85</td><td>55</td><td class="g">+30</td><td class="g">54.55%</td></tr>
                         <tr><td>Pureserve Ticket Allocations</td><td>1</td><td>0</td><td class="g">+1</td><td class="g">10.00%</td></tr>
                         <tr><td>Buyserve Ticket Allocations</td><td>35</td><td>21</td><td class="g">+14</td><td class="g">66.67%</td></tr>
@@ -592,6 +676,7 @@
                         <tr><td>Timeline For Request Completion</td><td>72</td><td>0</td><td class="r">+72</td><td class="r">0.00%</td></tr>
                         <tr><td>Number Of Service Requests Completed</td><td>8</td><td>8</td><td>0</td><td>0.00%</td></tr>
                         <tr><td>Revenue From Standalone Service</td><td class="g">₦1,290,500.00</td><td class="w">₦630,000.00</td><td class="g">₦660,500.00</td><td class="g">104.84%</td></tr>
+                        <!-- Internal Cross Sales -->
                         <tr><td rowspan="3"><b>REPS VALUE-ADD SALES</b></td><td>Product Request / Sales Lead</td><td>32</td><td>0</td><td class="g">+32</td><td class="g">0.00%</td></tr>
                         <tr><td>Product Sales Closed</td><td>17</td><td>24</td><td class="r">-7</td><td class="r">-29.17%</td></tr>
                         <tr><td>Revenue From Associated Product Sales</td><td class="g">₦22,898,480.00</td><td class="w">₦36,261,225.00</td><td class="r">-₦13,362,745.00</td><td class="r">-36.85%</td></tr>
@@ -602,7 +687,7 @@
             <h2>2026 SERVICE OPS MONTHLY DISTRIBUTION TRACE</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Group</th><th>Operational Line Metric</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
+                    <thead><tr><th>Group</th><th>Operational Line Metric</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th></tr></thead>
                     <tbody>
                         <tr><td rowspan="9"><b>REPS BASE</b></td><td>Service Requests Received</td><td>12</td><td>22</td><td>17</td><td>15</td><td>11</td><td>8</td></tr>
                         <tr><td>Pureserve Tracking</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
@@ -612,10 +697,10 @@
                         <tr><td>Request Processing Timeline</td><td>0</td><td>34.67</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
                         <tr><td>Request Completion Timeline</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
                         <tr><td>Service Requests Completed</td><td>3</td><td>9</td><td>7</td><td>13</td><td>9</td><td>4</td></tr>
-                        <tr><td>Revenue From Service Operations</td><td>₦600,000.00</td><td>₦0.00</td><td>₦337,500.00</td><td>₦293,000.00</td><td>₦0.00</td><td>₦60,000.00</td></tr>
-                        <tr><td rowspan="3"><b>CROSS TRACK</b></td><td>Product Request / Sales Lead</td><td>20</td><td>1</td><td>7</td><td>1</td><td>0</td><td>21</td></tr>
+                        <tr><td>Revenue From Service Operations</td><td>₦600,000</td><td>₦0</td><td>₦337,500</td><td>₦293,000</td><td>₦0</td><td>₦60,000</td></tr>
+                        <tr><td rowspan="3"><b>CROSS TRACK</b></td><td>Product Request / Sales Lead</td><td>2</td><td>0</td><td>1</td><td>7</td><td>1</td><td>21</td></tr>
                         <tr><td>Product Sales Closed</td><td>1</td><td>0</td><td>2</td><td>1</td><td>2</td><td>11</td></tr>
-                        <tr><td>Revenue From Associated Product Sales</td><td>₦1,402,825.00</td><td>₦0.00</td><td>₦821,000.00</td><td>₦967,000.00</td><td>₦14,112,255.00</td><td>₦5,595,400.00</td></tr>
+                        <tr><td>Revenue From Associated Product Sales</td><td>₦1,402,825</td><td>₦0</td><td>₦821,000</td><td>₦967,000</td><td>₦14,112,255</td><td>₦5,595,400</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -625,10 +710,12 @@
                 <table>
                     <thead><tr><th>Engineering Category</th><th>Target KPI Parameter Field</th><th>Jan-Jun 2026</th><th>Jan-Jun 2025</th><th>Variance Spread</th><th>Growth %</th></tr></thead>
                     <tbody>
+                        <!-- Repair Matrix -->
                         <tr><td rowspan="4"><b>REPAIRS & DIAGNOSTICS</b></td><td>No Of Request Received - Repair</td><td>43</td><td>55</td><td class="r">-12</td><td class="r">-21.82%</td></tr>
                         <tr><td>No Of Request Completed - Repairs</td><td>41</td><td>37</td><td class="g">+4</td><td class="g">10.81%</td></tr>
                         <tr><td>% Of Repairs Completed Successfully</td><td class="g">95.35%</td><td class="w">67.27%</td><td class="g">+28.08%</td><td class="g">41.73%</td></tr>
                         <tr><td>Timeline for completion (1hr - 24hr)</td><td>26</td><td>45</td><td class="r">-19</td><td class="r">-42.22%</td></tr>
+                        <!-- Installation Matrix -->
                         <tr><td rowspan="4"><b>FIELD INSTALLATIONS</b></td><td>No Of Installation Received</td><td>23</td><td>54</td><td class="r">-31</td><td class="r">-57.41%</td></tr>
                         <tr><td>No Of Installation Completed</td><td>8</td><td>8</td><td>0</td><td>0.00%</td></tr>
                         <tr><td>% Of Installation Completed Successfully</td><td class="r">34.78%</td><td class="w">14.81%</td><td class="g">+19.97%</td><td class="g">134.78%</td></tr>
@@ -648,7 +735,7 @@
             </header>
             <div class="stats">
                 <div class="card"><div class="lbl">H1 Consolidated Revenue</div><div class="val" style="color:var(--green)">₦559,090,785.00</div><div class="g">Gross Organizational Ledger</div></div>
-                <div class="card"><div class="lbl">Average Acquisition Cost (CAC)</div><div class="val" style="color:var(--green)">₦60,242.90</div><div class="g">-48.52% YoY Optimization</div></div>
+                <div class="card"><div class="lbl">Average Acquisition Cost (CAC)</div><div class="val" style="color:var(--green)">₦60,242.90</div><div class="g">-48.52% Hyper Optimization</div></div>
                 <div class="card"><div class="lbl">H1 Dynamic Refund Flow</div><div class="val" style="color:var(--red)">₦87,697,959.00</div><div class="r">78 Customers Impacted</div></div>
                 <div class="card"><div class="lbl">H1 Average Monthly Margin</div><div class="val w-m">12%</div><div class="g">Stable 11% Structural Parity</div></div>
             </div>
@@ -658,7 +745,7 @@
             <h2>FINANCIAL BALANCE METRICS SUMMARY (YoY MANAGEMENT VIEW)</h2>
             <div class="tbl-wrap">
                 <table>
-                    <thead><tr><th>Financial Sub-Ledger Classification Group</th><th>Jan-Jun 2026</th><th>Jan-Jun 25</th><th>Variance Spread Evaluation</th></tr></thead>
+                    <thead><tr><th>Financial Sub-Ledger Classification Group</th><th>Jan-Jun 2026</th><th>Jan-Jun 2025</th><th>Variance Spread Evaluation</th></tr></thead>
                     <tbody>
                         <tr><td><b>Gross Revenue</b></td><td class="g">₦559,090,785.00</td><td class="w">₦598,146,378.00</td><td class="r">-₦39,055,593.00 (-6.53%)</td></tr>
                         <tr><td><b>Total Logged Customer Base Volume</b></td><td>258 Customers</td><td>221 Customers</td><td class="g">+37 Customers (+16.74%)</td></tr>
@@ -669,8 +756,8 @@
                         <tr><td><b>Assigned Digital Leads Allocation</b></td><td>1,784 Leads</td><td>2,384 Leads</td><td class="r">-600 Leads Drop Across Channels</td></tr>
                         <tr><td><b>Average Monthly Operational Profit Margin</b></td><td>12%</td><td>11%</td><td class="g">+1% Structural Optimization Target</td></tr>
                         <tr><td><b>Total Capital Customer Refund Outflows</b></td><td class="r">₦87,697,959.00</td><td>₦53,440,848.13</td><td class="r">+₦34,257,110.87 Inflow Corrections</td></tr>
-                        <tr><td><b>Leads Refunded</b></td><td>78 Customers</td><td>43 Customers</td><td class="r">+35 Operational Discrepancies</td></tr>
-                        <tr><td><b>Unique Customers Count</b></td><td>233</td><td>159</td><td class="r">+74 High Escalation Flags</td></tr>
+                        <tr><td><b>Total Unique Client Transactors Refunded</b></td><td>78 Customers</td><td>43 Customers</td><td class="r">+35 Operational Discrepancies</td></tr>
+                        <tr><td><b>Unique Customer Refund Count Flags</b></td><td>233</td><td>159</td><td class="r">+74 High Escalation Flags</td></tr>
                         <tr><td><b>Total Completed Systems Orders</b></td><td>258 Orders</td><td>221 Orders</td><td class="g">+37 Fulfilled Procurement Invoices</td></tr>
                         <tr><td><b>Sponsored Paid Advertisements Spend Balance</b></td><td class="g">₦2,284,850.00</td><td>₦19,233,890.00</td><td class="g">-₦16,949,040.00 Budget Drops</td></tr>
                         <tr><td><b>Logistics, Delivery & Freight Spend</b></td><td>₦13,257,819.37</td><td>₦6,628,559.00</td><td class="r">+₦6,629,260.37 Transport Expansion</td></tr>
@@ -685,7 +772,7 @@
                 </table>
             </div>
 
-            <h2>2026 GENERAL FINANCIAL PROFILE MONTHLY RUN LEDGER</h2>
+            <h2>2026 GENERAL FINANCIAL PROFILE MONTLHY RUN LEDGER</h2>
             <div class="tbl-wrap">
                 <table>
                     <thead><tr><th>Financial Parameter Line Item</th><th>January</th><th>February</th><th>March</th><th>April</th><th>May</th><th>June</th></tr></thead>
@@ -706,244 +793,6 @@
             </div>
         </div>
     </div>
-
-<div id="page-enterprise" class="page">
-
-    <div class="department-header">
-        <h1>Enterprise Marketing</h1> <div class="meta"><button class="btn-back" onclick="showPage('outline')">MENU</button><span><b>H1 2026 RUN</b></span></div>
-            </header>
-            <div class="stats">
-        <p>EnergyMall Half Year Report 2026</p>
-    </div>
-
-    <div class="table-container">
-<!-- ======================================================== -->
-<!-- START: ENTERPRISE MARKETING DEPARTMENT SECTION           -->
-<!-- ======================================================== -->
-<div class="table-container" style="margin-top: 30px; margin-bottom: 30px;">
-    <h2 style="color: #1a365d; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0; font-size: 1.5rem; letter-spacing: 0.5px; text-transform: uppercase;">
-        Enterprise Marketing Performance
-    </h2>
-
-    <!-- Summary Table: Jan to June Overview -->
-    <h3 style="color: #4a5568; margin-top: 20px; font-size: 1.1rem; border-left: 4px solid #3182ce; padding-left: 8px;">H1 Summary (Jan to June 2026)</h3>
-    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left;">
-        <thead>
-            <tr style="background-color: #f7fafc;">
-                <th style="padding: 12px 16px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; border-bottom: 1px solid #edf2f7;">Metric Category / Title</th>
-                <th style="padding: 12px 16px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; border-bottom: 1px solid #edf2f7; text-align: right;">H1 2026 Actuals</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Email Marketing -->
-            <tr style="background-color: #ebf8ff; font-weight: bold;"><td colspan="2" style="padding: 10px 16px; color: #2b6cb0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Email Marketing</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">No Of Email Addresses Generated</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">6,025</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">No Email Campaign Blasts Sent</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">21</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Email Open Rate (%)</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">6.20%</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">No Of Leads Generated From Emails</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">1</td></tr>
-            
-            <!-- Organic -->
-            <tr style="background-color: #f0fff4; font-weight: bold;"><td colspan="2" style="padding: 10px 16px; color: #2f855a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Organic Growth &amp; Social</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Total Number Of Organic Post On LinkedIn</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">43</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Total Reach On Social Media</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">1,395</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Total Engagement From Social Media</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">200</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Total Traffic From Social Media</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">4,559</td></tr>
-            
-            <!-- SEO -->
-            <tr style="background-color: #faf5ff; font-weight: bold;"><td colspan="2" style="padding: 10px 16px; color: #6b46c1; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">SEO &amp; Content Strategy</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Total Articles Done</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">113</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Keyword Ranking For Enterprise Website</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">6</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">SEO Category Ranking</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">0.75</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">SEO Overall Ranking</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">2.25</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">Total Website Traffic From Search</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">66</td></tr>
-            
-            <!-- Strategic Performance KPIs -->
-            <tr style="background-color: #fffaf0; font-weight: bold;"><td colspan="2" style="padding: 10px 16px; color: #dd6b20; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Strategic Performance Target KPIs</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">TOTAL LEADS FROM ENTERPRISE CHANNELS</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">0</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">KEYWORDS COVERING ALL SOLUTIONS IN THE ENTERPRISE BOUQUET</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">0</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">CONTACTS OF KEY DECISION MAKERS ACROSS ALL INDUSTRIES FOR ENGAGEMENT (MIN. 4 PER ORG)</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">0</td></tr>
-            <tr><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; font-weight: 500; color: #2d3748;">TANGIBLE, MEASURABLE RESULTS FROM HOLISTIC ACCOUNT BASED MARKETING</td><td style="padding: 12px 16px; border-bottom: 1px solid #edf2f7; text-align: right; font-variant-numeric: tabular-nums;">0</td></tr>
-        </tbody>
-    </table>
-
-    <!-- Monthly Breakdown Table -->
-    <h3 style="color: #4a5568; margin-top: 35px; font-size: 1.1rem; border-left: 4px solid #48bb78; padding-left: 8px;">2026 Monthly Breakdown</h3>
-    <div style="overflow-x: auto; margin-top: 10px;">
-        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
-            <thead>
-                <tr style="background-color: #f7fafc;">
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; width: 30%;">Metrics (Monthly)</th>
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; text-align: right;">Jan</th>
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; text-align: right;">Feb</th>
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; text-align: right;">Mar</th>
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; text-align: right;">Apr</th>
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; text-align: right;">May</th>
-                    <th style="padding: 12px 10px; color: #4a5568; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; border-bottom: 1px solid #edf2f7; text-align: right;">Jun</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Email Group -->
-                <tr style="background-color: #ebf8ff;"><td colspan="7" style="padding: 6px 10px; font-weight: bold; color: #2b6cb0; font-size: 0.75rem; text-transform: uppercase;">Email Marketing Tracking</td></tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Email Addresses Generated</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">271</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">2,981</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">2,980</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Email Campaign Blasts Sent</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">4</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">10</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">10</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Email Open Rate (%)</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem; color: #a0aec0; font-style: italic;">#DIV/0!</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">74.80%</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">6.28%</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">6.28%</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem; color: #a0aec0; font-style: italic;">#DIV/0!</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem; color: #a0aec0; font-style: italic;">#DIV/0!</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Leads From Emails</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">1</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-
-                <!-- Organic Group -->
-                <tr style="background-color: #f0fff4;"><td colspan="7" style="padding: 6px 10px; font-weight: bold; color: #2f855a; font-size: 0.75rem; text-transform: uppercase;">Organic Posts &amp; Traffic</td></tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">LinkedIn Organic Posts</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">7</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">15</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">15</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Social Media Reach</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">300</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">367</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">367</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Social Media Engagement</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">104</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">47</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">47</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Social Media Traffic Flow</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">196</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">196</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-
-                <!-- SEO Group -->
-                <tr style="background-color: #faf5ff;"><td colspan="7" style="padding: 6px 10px; font-weight: bold; color: #6b46c1; font-size: 0.75rem; text-transform: uppercase;">SEO Optimization Tracking</td></tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Articles Done</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">19</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">47</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">47</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Keyword Ranking (Enterprise)</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">3</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">3</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">SEO Category Ranking</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">SEO Overall Ranking</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">2</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Website Traffic from Search</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">6</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-
-                <!-- Baseline Target Group -->
-                <tr style="background-color: #fffaf0;"><td colspan="7" style="padding: 6px 10px; font-weight: bold; color: #dd6b20; font-size: 0.75rem; text-transform: uppercase;">Strategic Target Pipelines</td></tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Total Channel Leads</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Solution Bouquet Keywords</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; font-size: 0.85rem;">Industry Decision Maker Contacts</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #edf2f7; text-align: right; font-size: 0.85rem;">0</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<!-- ======================================================== -->
-<!-- END: ENTERPRISE MARKETING DEPARTMENT SECTION             -->
-<!-- ======================================================== -->
 
     <!-- NAVIGATION JAVASCRIPT -->
     <script>
